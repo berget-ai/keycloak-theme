@@ -12,10 +12,7 @@ import "./berget-theme.css";
 
 export default function BergetTemplate(props: TemplateProps<KcContext, I18n>) {
     const {
-        displayInfo = false,
         displayMessage = true,
-        displayRequiredFields = false,
-        headerNode,
         socialProvidersNode = null,
         infoNode = null,
         documentTitle,
@@ -61,30 +58,34 @@ export default function BergetTemplate(props: TemplateProps<KcContext, I18n>) {
                         <CardTitle className="text-3xl text-white font-serif">
                             {realm.displayName || realm.name}
                         </CardTitle>
-                        <p className="text-white/60">
-                            Sign in to continue
-                        </p>
+                        <p className="text-white/60">Sign in to continue</p>
                     </CardHeader>
-                    
+
                     <CardContent className="space-y-6">
                         {displayMessage && message && (
-                            <Alert 
+                            <Alert
                                 variant={
-                                    message.type === "error" ? "destructive" : 
-                                    message.type === "success" ? "success" : 
-                                    "default"
+                                    message.type === "error"
+                                        ? "destructive"
+                                        : message.type === "success"
+                                          ? "success"
+                                          : "default"
                                 }
                             >
                                 <AlertDescription>
-                                    <span dangerouslySetInnerHTML={{ __html: kcSanitize(message.summary) }} />
+                                    <span
+                                        dangerouslySetInnerHTML={{
+                                            __html: kcSanitize(message.summary)
+                                        }}
+                                    />
                                 </AlertDescription>
                             </Alert>
                         )}
-                        
+
                         {children}
-                        
+
                         {socialProvidersNode}
-                        
+
                         {infoNode && (
                             <div className="mt-6 pt-6 border-t border-white/10">
                                 {infoNode}
