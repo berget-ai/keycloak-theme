@@ -41,22 +41,7 @@ body {
     background-size: 24px 24px;
 }
 
-/* Override Storybook styles */
-.sb-main-padded {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    min-height: 100vh !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-.sb-show-main {
-    background: rgba(0, 0, 0, 0.85) !important;
-    backdrop-filter: blur(12px) !important;
-    min-height: 100vh !important;
-}
+/* Storybook styles are handled in .storybook/preview.ts */
 
 /* Berget Auth Container */
 .berget-auth-container {

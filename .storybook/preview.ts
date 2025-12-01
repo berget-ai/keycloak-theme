@@ -6,6 +6,22 @@ const style = document.createElement("style");
 style.innerHTML = `
   .sb-main-padded {
     max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+  
+  .sb-show-main {
+    background: hsl(0 0% 10%) !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+  
+  #storybook-root {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 100vh !important;
   }
   
   body, .sb-show-main {
