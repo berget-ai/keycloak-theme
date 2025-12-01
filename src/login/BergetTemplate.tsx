@@ -147,7 +147,7 @@ export default function BergetTemplate(props: TemplateProps<KcContext, I18n>) {
                         <img
                             src={BERGET_LOGO}
                             alt="Berget Logo"
-                            className="h-16 w-auto"
+                            className="h-16 w-auto logo-animate"
                         />
                     </div>
                     <CardTitle className="text-3xl text-white font-serif mb-2">
