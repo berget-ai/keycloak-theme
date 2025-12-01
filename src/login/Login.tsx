@@ -5,6 +5,8 @@ import { Alert, AlertDescription } from "../components/ui/Alert";
 import { Button } from "../components/ui/Button";
 import Checkbox from "../components/ui/Checkbox";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
+import "./berget-theme.css";
+import "../index.css";
 
 interface LoginProps {
     kcContext: Extract<KcContext, { pageId: "login.ftl" }>;
