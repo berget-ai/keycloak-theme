@@ -95,8 +95,14 @@
                 <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="container" style="max-width: 600px;">
                     <!-- Logo -->
                     <tr>
-                        <td align="center" style="padding-bottom: 32px;">
-                            <img src="https://berget.ai/logo-white.png" alt="Berget AI" width="48" height="48" style="display: block;" />
+                        <td align="center" style="padding-bottom: 32px; text-align: center;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td align="center" style="text-align: center;">
+                                        <img src="https://berget.ai/logo-white.png" alt="Berget AI" width="48" height="48" style="display: inline-block; margin: 0 auto;" />
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     
@@ -105,11 +111,11 @@
                         <td>
                             <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(32, 32, 32, 0.9) 100%); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px;">
                                 <tr>
-                                    <td class="content" style="padding: 40px;">
+                                    <td class="content" style="padding: 40px; text-align: center;">
                                         <!-- Email content -->
                                         <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
-                                                <td style="color: #ffffff; font-size: 15px; line-height: 1.6;">
+                                                <td align="center" style="color: #ffffff; font-size: 15px; line-height: 1.6; text-align: center;">
                                                     <#nested>
                                                 </td>
                                             </tr>
@@ -122,11 +128,11 @@
                     
                     <!-- Footer -->
                     <tr>
-                        <td align="center" style="padding-top: 32px;">
-                            <p style="margin: 0; color: rgba(255, 255, 255, 0.4); font-size: 13px;">
+                        <td align="center" style="padding-top: 32px; text-align: center;">
+                            <p style="margin: 0; color: rgba(255, 255, 255, 0.4); font-size: 13px; text-align: center;">
                                 &copy; ${.now?string('yyyy')} Berget AI. All rights reserved.
                             </p>
-                            <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.3); font-size: 12px;">
+                            <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.3); font-size: 12px; text-align: center;">
                                 European AI Infrastructure
                             </p>
                         </td>
