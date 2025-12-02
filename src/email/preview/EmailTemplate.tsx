@@ -80,7 +80,7 @@ interface EmailButtonProps {
 
 export function EmailButton({ href, children }: EmailButtonProps) {
     return (
-        <div style={{ margin: "32px 0" }}>
+        <div style={{ margin: "32px 0", textAlign: "center" }}>
             <a
                 href={href}
                 style={{

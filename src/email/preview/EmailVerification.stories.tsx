@@ -13,13 +13,20 @@ function EmailVerificationEmail() {
                     margin: "0 0 24px 0",
                     fontSize: 24,
                     fontWeight: 500,
-                    color: "#ffffff"
+                    color: "#ffffff",
+                    textAlign: "center"
                 }}
             >
                 Verify Your Email
             </h1>
 
-            <p style={{ margin: "0 0 24px 0", color: "rgba(255, 255, 255, 0.7)" }}>
+            <p
+                style={{
+                    margin: "0 0 24px 0",
+                    color: "rgba(255, 255, 255, 0.7)",
+                    textAlign: "center"
+                }}
+            >
                 Welcome to <strong style={{ color: "#ffffff" }}>{realmName}</strong>!
                 Please verify your email address by clicking the button below.
             </p>
@@ -30,7 +37,8 @@ function EmailVerificationEmail() {
                 style={{
                     margin: "0 0 16px 0",
                     color: "rgba(255, 255, 255, 0.5)",
-                    fontSize: 14
+                    fontSize: 14,
+                    textAlign: "center"
                 }}
             >
                 This link will expire in{" "}
@@ -40,16 +48,36 @@ function EmailVerificationEmail() {
                 .
             </p>
 
-            <p style={{ margin: 0, color: "rgba(255, 255, 255, 0.5)", fontSize: 14 }}>
+            <p
+                style={{
+                    margin: 0,
+                    color: "rgba(255, 255, 255, 0.5)",
+                    fontSize: 14,
+                    textAlign: "center"
+                }}
+            >
                 If you didn't create this account, you can safely ignore this email.
             </p>
 
             <EmailDivider />
 
-            <p style={{ margin: 0, color: "rgba(255, 255, 255, 0.4)", fontSize: 13 }}>
+            <p
+                style={{
+                    margin: 0,
+                    color: "rgba(255, 255, 255, 0.4)",
+                    fontSize: 13,
+                    textAlign: "center"
+                }}
+            >
                 If the button doesn't work, copy and paste this link into your browser:
             </p>
-            <p style={{ margin: "8px 0 0 0", wordBreak: "break-all" }}>
+            <p
+                style={{
+                    margin: "8px 0 0 0",
+                    wordBreak: "break-all",
+                    textAlign: "center"
+                }}
+            >
                 <EmailLink href={link}>{link}</EmailLink>
             </p>
         </EmailTemplate>
