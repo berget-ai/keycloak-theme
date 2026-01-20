@@ -104,26 +104,15 @@ export interface PricingCardsProps {
  */
 export const PricingCards = React.forwardRef<HTMLDivElement, PricingCardsProps>(
   ({ tiers, columns = 3, className }, ref) => {
-    // Generate grid classes based on columns prop
-    const getGridClass = () => {
-      switch (columns) {
-        case 2:
-          return 'grid-cols-1 md:grid-cols-2'
-        case 3:
-          return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-        case 4:
-          return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
-        default:
-          return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-      }
-    }
-
     return (
       <div
         ref={ref}
         className={cn(
           'grid gap-6 md:gap-8',
-          getGridClass(),
+          // Explicit classes so Tailwind compiles them
+          columns === 2 && 'grid-cols-1 md:grid-cols-2',
+          columns === 3 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+          columns === 4 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
           className
         )}
       >
