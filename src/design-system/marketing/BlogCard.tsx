@@ -20,6 +20,14 @@ export interface BlogPost {
    */
   author: string
   /**
+   * Author email
+   */
+  email?: string
+  /**
+   * Author profile image URL
+   */
+  authorImage?: string
+  /**
    * Publication date (formatted string)
    */
   date: string
@@ -32,9 +40,21 @@ export interface BlogPost {
    */
   image?: string
   /**
+   * Image alt text
+   */
+  imageAlt?: string
+  /**
    * Category or tag
    */
   category?: string
+  /**
+   * Language
+   */
+  language?: 'en' | 'sv'
+  /**
+   * Tags array
+   */
+  tags?: string[]
   /**
    * Link to full article
    */
@@ -95,7 +115,7 @@ export const BlogCard = React.forwardRef<HTMLDivElement, BlogCardProps>(
       <div
         ref={ref}
         className={cn(
-          'group rounded-2xl border backdrop-blur-xl transition-all duration-300 cursor-pointer',
+          'group rounded-2xl border backdrop-blur-xl transition-all duration-500 cursor-pointer relative',
           variant === 'featured' &&
             'border-[hsl(var(--secondary))]/30 bg-[hsl(var(--secondary))]/5 hover:border-[hsl(var(--secondary))]/50',
           variant === 'default' &&
@@ -107,26 +127,33 @@ export const BlogCard = React.forwardRef<HTMLDivElement, BlogCardProps>(
         onClick={handleClick}
         {...props}
       >
+        {/* Gradient hover effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-[hsl(var(--secondary))]/5 via-[hsl(var(--accent))]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         {/* Image */}
         {post.image && (
-          <div className="aspect-video w-full overflow-hidden rounded-t-2xl bg-white/5">
+          <div className="relative aspect-video w-full overflow-hidden rounded-t-2xl bg-white/5">
             <img
               src={post.image}
-              alt={post.title}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              alt={post.imageAlt || post.title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         )}
 
-        <div className={cn('p-6', variant === 'featured' && 'p-8')}>
-          {/* Category */}
-          {post.category && (
-            <div className="mb-3">
+        <div className={cn('p-6 relative z-10', variant === 'featured' && 'p-8')}>
+          {/* Category & Language */}
+          <div className="flex items-center gap-2 mb-3">
+            {post.category && (
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[hsl(var(--secondary))]/20 text-[hsl(var(--secondary))]">
                 {post.category}
               </span>
-            </div>
-          )}
+            )}
+            {post.language && (
+              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-white/5">
+                {post.language === 'en' ? '🇬🇧 English' : '🇸🇪 Svenska'}
+              </span>
+            )}
+          </div>
 
           {/* Title */}
           <h3
@@ -143,22 +170,35 @@ export const BlogCard = React.forwardRef<HTMLDivElement, BlogCardProps>(
             {post.excerpt}
           </p>
 
-          {/* Meta */}
-          <div className="flex items-center gap-4 text-sm text-[hsl(var(--muted-foreground))]">
-            <div className="flex items-center gap-1.5">
-              <User className="w-4 h-4" />
-              <span>{post.author}</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Calendar className="w-4 h-4" />
-              <span>{post.date}</span>
-            </div>
-            {post.readTime && (
-              <div className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4" />
-                <span>{post.readTime} min</span>
-              </div>
+          {/* Author Byline */}
+          <div className="flex items-center gap-3 text-sm">
+            {post.authorImage && (
+              <img
+                src={post.authorImage}
+                alt={post.author}
+                className="w-8 h-8 rounded-full object-cover"
+              />
             )}
+            <div className="flex-1">
+              <div className="flex items-center gap-2 flex-wrap text-[hsl(var(--muted-foreground))]">
+                {!post.authorImage && <User className="w-4 h-4" />}
+                <span className="font-medium text-white">{post.author}</span>
+                <span>•</span>
+                <div className="flex items-center gap-1.5">
+                  <Calendar className="w-4 h-4" />
+                  <span>{post.date}</span>
+                </div>
+                {post.readTime && (
+                  <>
+                    <span>•</span>
+                    <div className="flex items-center gap-1.5">
+                      <Clock className="w-4 h-4" />
+                      <span>{post.readTime} min</span>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
 
           {/* Read More */}
