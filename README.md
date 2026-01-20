@@ -13,6 +13,14 @@
 
 Berget är ett modernt Keycloak-tema med skandinavisk design estetik, skapat för [Berget AI Console](https://berget.ai). Temat erbjuder en ren och minimalistisk inloggningsupplevelse med fokus på användarupplevelse och tillgänglighet.
 
+## 📚 Design System (Storybook)
+
+Utforska designsystemet och alla UI-komponenter i vår live Storybook:
+
+**🔗 [https://berget-ai.github.io/berget-design-system/](https://berget-ai.github.io/berget-design-system/)**
+
+Här kan du se alla komponenter, deras varianter och användningsexempel direkt i webbläsaren.
+
 ## Design Principles
 
 -   **Skandinavisk design** - Minimalistiskt och funktionellt gränssnitt inspirerat av nordisk designtradition
