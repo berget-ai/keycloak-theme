@@ -327,7 +327,7 @@ export const EmailVerification: Story = {
 export const SystemNotification: Story = {
   args: {
     title: 'Scheduled Maintenance',
-    preheader: 'We'll be performing maintenance on Jan 25',
+    preheader: "We'll be performing maintenance on Jan 25",
     children: (
       <>
         <EmailSection>
