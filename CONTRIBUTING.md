@@ -32,6 +32,8 @@ design-system/
 └── tokens/          # Design tokens (colors, typography, spacing)
 ```
 
+> 💡 **Choosing the right component?** See [COMPONENT-GUIDE.md](src/design-system/COMPONENT-GUIDE.md) for detailed guidance on Panel vs Card vs FeatureCard.
+
 ### When to Create a New Component
 
 #### Create a **Primitive** when:

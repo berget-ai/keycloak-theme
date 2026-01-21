@@ -46,12 +46,14 @@ design-system/
 Basic building blocks that everything else builds upon.
 
 - `Panel` - Base for all card-like surfaces ⭐ **NEW**
-- `Button` - Actions and interactions
 - `Card` - Structured content containers (extends Panel)
+- `Button` - Actions and interactions
 - `Badge` - Status indicators and labels
 - `Alert` - Important messages and notifications
 - `Input` - Text input fields
 - `Logo` - Official Berget branding
+
+> 💡 **New to the system?** Read [COMPONENT-GUIDE.md](./COMPONENT-GUIDE.md) to understand when to use Panel vs Card vs FeatureCard.
 
 #### **Layout** - Structure
 Components for page structure and spacing.
@@ -349,15 +351,26 @@ All components follow WAI-ARIA guidelines:
 - CSS Custom Properties
 - No IE11 support
 
-## Contributing
+## Documentation
 
-See [CONTRIBUTING.md](../../CONTRIBUTING.md) for detailed guidelines on:
+### For Contributors
 
-- Component structure
-- Naming conventions
-- Documentation standards
-- Composition patterns
-- Testing checklist
+- **[CONTRIBUTING.md](../../CONTRIBUTING.md)** - Complete contribution guide
+  - Component structure and templates
+  - Naming conventions
+  - Documentation standards
+  - Border system guidelines
+  - Composition patterns
+  - Testing checklist
+
+### For Developers
+
+- **[COMPONENT-GUIDE.md](./COMPONENT-GUIDE.md)** - Component selection guide
+  - Panel vs Card vs FeatureCard explained
+  - Decision trees and visual guides
+  - Real-world examples
+  - Common mistakes to avoid
+  - Pro tips and best practices
 
 ## License
 
