@@ -261,7 +261,7 @@ export const RegistrationFlow: Story = {
 
     return (
       <div className="min-h-screen p-8 flex items-center justify-center">
-        <div className="max-w-3xl w-full bg-[#1A1A1A]/40 backdrop-blur-xl rounded-2xl p-8 border border-[hsl(var(--border))]">
+        <div className="max-w-3xl w-full bg-card/40 backdrop-blur-xl rounded-2xl p-8 border border-[hsl(var(--border))]">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-medium mb-2">Create Account</h2>
           <p className="text-white/60">

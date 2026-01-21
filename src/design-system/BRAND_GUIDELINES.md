@@ -8,7 +8,7 @@ Detta dokument beskriver hur Berget AI's brand guidelines är implementerade i d
 
 ```css
 /* Bakgrund */
---background: #1A1A1A (0 0% 10%)
+--background: #0A0A0A (0 0% 4%) /* Console-inspired deep black */
 
 /* Primär Grön (Primary Green) */
 --berget-moss: #52B788 (151 29% 49%) 

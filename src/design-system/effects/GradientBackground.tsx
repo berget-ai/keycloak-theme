@@ -21,7 +21,7 @@ const gradientVariants = {
   berget: 'from-[#2D6A4F] via-[#40916C] to-[#52B788]',
   warm: 'from-[#342F2D] via-[#52433D] to-[#6B5442]',
   cool: 'from-[#1A3A3A] via-[#2D5555] to-[#40706F]',
-  subtle: 'from-[#0A0A0A] via-[#1A1A1A] to-[#2A2A2A]',
+  subtle: 'from-[#0A0A0A] via-[#121212] to-[#1A1A1A]',
 }
 
 /**

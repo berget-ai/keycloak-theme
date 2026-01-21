@@ -127,7 +127,7 @@ import '@/design-system/tokens'
 - `--berget-earth` (#2D6A4F) - Dark earth tone
 
 **Semantic Colors:**
-- Dark theme (default): `#1A1A1A` background
+- Dark theme (default): `#0A0A0A` background (console-inspired deep black)
 - Semantic tokens: `--primary`, `--secondary`, `--accent`, `--destructive`
 
 ### Typography

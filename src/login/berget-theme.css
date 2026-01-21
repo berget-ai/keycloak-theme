@@ -280,7 +280,7 @@ body {
 
 /* Additional Berget-specific styles */
 .berget-keycloak-body .kc-form-card {
-    background: #1A1A1A/40;
+    background: #121212/40;
     backdrop-filter: blur(16px);
     border-radius: 1rem;
     padding: 2rem;

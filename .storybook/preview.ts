@@ -4,19 +4,19 @@ import "../src/index.css";
 // Remove Storybook's default max-width constraint and apply dark theme
 const style = document.createElement("style");
 style.innerHTML = `
-  /* Storybook layout overrides - default dark background */
+  /* Storybook layout overrides - console-inspired deep black background */
   .sb-main-padded {
     max-width: none !important;
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
-    background: hsl(0 0% 10%) !important;
+    background: hsl(0 0% 4%) !important;
   }
   
   /* For centered layout stories, add padding, grid, and center content */
   .sb-main-padded:has([data-layout="centered"]) {
     padding: 2rem !important;
-    background: hsl(0 0% 10%) !important;
+    background: hsl(0 0% 4%) !important;
     background-image:
       linear-gradient(to bottom, rgba(229, 221, 213, 0.02) 1px, transparent 1px),
       linear-gradient(to right, rgba(229, 221, 213, 0.02) 1px, transparent 1px) !important;
@@ -28,7 +28,7 @@ style.innerHTML = `
   }
   
   .sb-show-main {
-    background: hsl(0 0% 10%) !important;
+    background: hsl(0 0% 4%) !important;
     width: 100% !important;
     max-width: none !important;
   }
@@ -37,7 +37,7 @@ style.innerHTML = `
     width: 100% !important;
     max-width: none !important;
     min-height: 100vh !important;
-    background: hsl(0 0% 10%);
+    background: hsl(0 0% 4%);
     color: hsl(0 0% 100%);
   }
   

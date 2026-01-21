@@ -30,27 +30,27 @@
     --berget-sage: 151 33% 62%;        /* #8EB29F - Secondary green */
     --berget-earth: 30 8% 20%;         /* #342F2D - Dark earth tone */
     
-    /* Semantic Colors - Dark Theme (Default) */
-    --background: 0 0% 10%;            /* #1A1A1A - Main background */
-    --foreground: 0 0% 100%;           /* #FFFFFF - Main text */
+    /* Semantic Colors - Dark Theme (Console-inspired) */
+    --background: 0 0% 4%;             /* #0A0A0A - Deep black background (console main) */
+    --foreground: 0 0% 100%;           /* #FFFFFF - Pure white text */
     
-    --card: 0 0% 10%;                  /* #1A1A1A - Card background */
+    --card: 0 0% 7%;                   /* #121212 - Card background (console cards) */
     --card-foreground: 0 0% 100%;      /* #FFFFFF - Card text */
     
-    --popover: 0 0% 10%;               /* #1A1A1A - Popover background */
+    --popover: 0 0% 8%;                /* #141414 - Popover background */
     --popover-foreground: 0 0% 100%;   /* #FFFFFF - Popover text */
     
-    --primary: 45 15% 88%;             /* Stone - Primary actions */
-    --primary-foreground: 0 0% 10%;    /* Dark text on primary */
+    --primary: 45 15% 88%;             /* Stone - Primary actions (Berget brand) */
+    --primary-foreground: 0 0% 4%;     /* Deep black text on primary */
     
     --secondary: 151 29% 49%;          /* Moss - Secondary actions */
     --secondary-foreground: 0 0% 100%; /* White text on secondary */
     
     --accent: 151 33% 62%;             /* Sage - Accents and highlights */
-    --accent-foreground: 0 0% 10%;     /* Dark text on accent */
+    --accent-foreground: 0 0% 4%;      /* Deep black text on accent */
     
-    --muted: 0 0% 15%;                 /* Muted backgrounds */
-    --muted-foreground: 0 0% 60%;      /* Muted text */
+    --muted: 0 0% 10%;                 /* #1A1A1A - Muted backgrounds (console sidebar) */
+    --muted-foreground: 0 0% 65%;      /* #A6A6A6 - Muted text (slightly brighter) */
     
     --destructive: 0 72% 51%;          /* Error/destructive actions */
     --destructive-foreground: 0 0% 100%;

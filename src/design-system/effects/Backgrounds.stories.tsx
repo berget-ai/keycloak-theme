@@ -36,7 +36,7 @@ export default meta
  * Solid Dark Background
  * 
  * The default background for most application interfaces.
- * Pure dark (#1A1A1A) without any patterns or effects.
+ * Pure deep black (#0A0A0A) without any patterns or effects.
  */
 export const SolidDark: StoryObj = {
   render: () => (
@@ -44,7 +44,7 @@ export const SolidDark: StoryObj = {
       <div className="text-center max-w-2xl px-6">
         <h1 className="text-4xl mb-4">Solid Dark Background</h1>
         <p className="text-[hsl(var(--muted-foreground))] mb-8">
-          Pure dark background (#1A1A1A) for focused, distraction-free interfaces.
+          Pure deep black background (#0A0A0A) for focused, distraction-free interfaces.
           Use in dashboards, forms, and admin pages.
         </p>
         <div className="grid grid-cols-3 gap-4">
@@ -226,7 +226,7 @@ export const GradientSubtle: StoryObj = {
  */
 export const NetworkAnimated: StoryObj = {
   render: () => (
-    <div className="relative min-h-screen bg-[#1A1A1A] flex items-center justify-center">
+    <div className="relative min-h-screen bg-background flex items-center justify-center">
       <NetworkBackground opacity={0.4} nodeCount={50} />
       <div className="relative z-10 text-center max-w-2xl px-6">
         <h1 className="text-5xl mb-4 text-white">Network Background</h1>
@@ -309,7 +309,7 @@ export const AllBackgrounds: StoryObj = {
       </GradientBackground>
 
       {/* Network */}
-      <div className="relative min-h-[50vh] bg-[#1A1A1A] flex items-center justify-center p-8">
+      <div className="relative min-h-[50vh] bg-background flex items-center justify-center p-8">
         <NetworkBackground opacity={0.4} nodeCount={30} />
         <div className="relative z-10 text-center">
           <h2 className="text-2xl mb-2 text-white">Network</h2>

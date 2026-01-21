@@ -80,7 +80,7 @@ export default function Login({ kcContext, i18n }: LoginProps) {
                                         <span className="w-full border-t border-white/10" />
                                     </div>
                                     <div className="relative flex justify-center text-xs uppercase">
-                                        <span className="bg-[#1A1A1A] px-2 text-white/60">
+                                        <span className="bg-background px-2 text-white/60">
                                             Or
                                         </span>
                                     </div>

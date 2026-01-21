@@ -18,7 +18,7 @@ Vi har fyra huvudtyper av bakgrunder, var och en med sitt specifika användnings
 ## 1. Solid Dark Background
 
 ### 🎨 Utseende
-- Helt mörk bakgrund: `#1A1A1A` (HSL: 0 0% 10%)
+- Helt mörk bakgrund: `#0A0A0A` (HSL: 0 0% 4%) - Console-inspired deep black
 - Ren, minimal, utan distraktioner
 - Perfekt för fokuserat arbete
 
@@ -174,7 +174,7 @@ Kalla blå-gröna toner
 Väldigt subtil mörk gradient
 ```tsx
 <GradientBackground variant="subtle">
-// Gradient: #0A0A0A → #1A1A1A → #2A2A2A
+// Gradient: #0A0A0A → #121212 → #1A1A1A
 ```
 **Använd för:**
 - Pricing sections
