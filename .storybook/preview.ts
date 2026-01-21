@@ -13,7 +13,7 @@ style.innerHTML = `
     background: hsl(0 0% 10%) !important;
   }
   
-  /* For centered layout stories, add padding and grid */
+  /* For centered layout stories, add padding, grid, and center content */
   .sb-main-padded:has([data-layout="centered"]) {
     padding: 2rem !important;
     background: hsl(0 0% 10%) !important;
@@ -21,6 +21,10 @@ style.innerHTML = `
       linear-gradient(to bottom, rgba(229, 221, 213, 0.02) 1px, transparent 1px),
       linear-gradient(to right, rgba(229, 221, 213, 0.02) 1px, transparent 1px) !important;
     background-size: 24px 24px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh !important;
   }
   
   .sb-show-main {
