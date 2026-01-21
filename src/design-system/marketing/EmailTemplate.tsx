@@ -106,8 +106,7 @@ export const EmailTemplate = React.forwardRef<HTMLDivElement, EmailTemplateProps
             <img
               src={logoUrl}
               alt={companyName}
-              className="inline-block w-12 h-12"
-              width={48}
+              style={{ height: '48px', width: 'auto', display: 'inline-block' }}
               height={48}
             />
           </div>
