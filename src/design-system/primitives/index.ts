@@ -15,6 +15,7 @@ export {
 export { Badge, badgeVariants, type BadgeProps } from './Badge'
 export { Button, buttonVariants, type ButtonProps } from './Button'
 export { Input, type InputProps } from './Input'
+export { Logo, type LogoProps } from './Logo'
 export {
   Card,
   CardHeader,
