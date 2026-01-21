@@ -107,26 +107,40 @@ const Panel = React.forwardRef<HTMLDivElement, PanelProps>(
     >
       {bokeh && (
         <div className="bokeh">
+          {/* Top-left shimmer - creates the glow on border */}
+          <div
+            className="bokeh-circle"
+            style={{
+              width: '150px',
+              height: '150px',
+              top: '-20px',
+              left: '-20px',
+              '--color': 'rgba(229, 221, 213, 0.12)',
+              animationDelay: '0s',
+            } as React.CSSProperties}
+          />
+          {/* Center-left subtle glow */}
           <div
             className="bokeh-circle"
             style={{
               width: '120px',
               height: '120px',
-              top: '10%',
-              left: '15%',
-              '--color': 'rgba(229, 221, 213, 0.08)',
-              animationDelay: '0s',
+              top: '40%',
+              left: '10%',
+              '--color': 'rgba(229, 221, 213, 0.06)',
+              animationDelay: '5s',
             } as React.CSSProperties}
           />
+          {/* Bottom-right accent */}
           <div
             className="bokeh-circle"
             style={{
               width: '100px',
               height: '100px',
-              top: '60%',
-              right: '20%',
-              '--color': 'rgba(82, 183, 136, 0.06)',
-              animationDelay: '7s',
+              bottom: '10%',
+              right: '15%',
+              '--color': 'rgba(82, 183, 136, 0.08)',
+              animationDelay: '10s',
             } as React.CSSProperties}
           />
         </div>
