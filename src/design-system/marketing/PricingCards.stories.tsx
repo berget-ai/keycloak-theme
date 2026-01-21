@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { PricingCards, type PricingTier } from './PricingCards'
 
 const meta = {
-  title: 'Design System/Marketing/PricingCards',
+  title: 'Organisms/Pricing Cards',
   component: PricingCards,
   parameters: {
     layout: 'padded',

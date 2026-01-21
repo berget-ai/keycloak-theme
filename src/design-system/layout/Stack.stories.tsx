@@ -5,7 +5,7 @@ import { Card } from '../primitives/Card'
 import { Badge } from '../primitives/Badge'
 
 const meta = {
-  title: 'Design System/Layout/Stack',
+  title: 'Utilities/Stack',
   component: Stack,
   parameters: {
     layout: 'centered',

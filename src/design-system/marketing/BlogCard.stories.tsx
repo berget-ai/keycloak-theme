@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { BlogCard, BlogGrid, type BlogPost } from './BlogCard'
 
 const meta = {
-  title: 'Design System/Marketing/Blog',
+  title: 'Organisms/Blog Card',
   component: BlogCard,
   parameters: {
     layout: 'padded',

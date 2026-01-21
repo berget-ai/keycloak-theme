@@ -5,7 +5,7 @@ import { Button } from '../primitives/Button'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 const meta = {
-  title: 'Design System/Composed/Stepper',
+  title: 'Organisms/Stepper',
   component: Stepper,
   parameters: {
     layout: 'padded',

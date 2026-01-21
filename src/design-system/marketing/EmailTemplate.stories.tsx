@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { EmailTemplate, EmailButton, EmailSection } from './EmailTemplate'
 
 const meta = {
-  title: 'Design System/Marketing/Email',
+  title: 'Organisms/Email Template',
   component: EmailTemplate,
   parameters: {
     layout: 'fullscreen',

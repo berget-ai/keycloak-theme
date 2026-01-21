@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Container } from './Container'
 
 const meta = {
-  title: 'Design System/Layout/Container',
+  title: 'Utilities/Container',
   component: Container,
   parameters: {
     layout: 'fullscreen',

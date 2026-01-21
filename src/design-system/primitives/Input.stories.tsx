@@ -3,7 +3,7 @@ import { Input } from './Input'
 import { Badge } from './Badge'
 
 const meta = {
-  title: 'Design System/Primitives/Input',
+  title: 'Atoms/Input',
   component: Input,
   parameters: {
     layout: 'centered',

@@ -14,7 +14,7 @@ import { Database, Shield, Zap } from 'lucide-react'
  * Card component showcasing all variants in the Berget Design System.
  */
 const meta = {
-  title: 'Design System/Primitives/Card',
+  title: 'Molecules/Card',
   component: Card,
   parameters: {
     layout: 'centered',

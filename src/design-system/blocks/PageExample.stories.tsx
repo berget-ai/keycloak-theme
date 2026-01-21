@@ -6,7 +6,7 @@ import { Button } from '../primitives/Button'
 import { Shield, Cloud, Server, Zap, Database, Bot, Leaf, Heart, Lock } from 'lucide-react'
 
 const meta = {
-  title: 'Design System/Blocks/Page Examples',
+  title: 'Templates/Page Examples',
   parameters: {
     layout: 'fullscreen',
     docs: {

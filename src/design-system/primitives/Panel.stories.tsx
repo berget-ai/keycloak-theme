@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Panel } from './Panel'
 
 const meta = {
-  title: 'Design System/Primitives/Panel',
+  title: 'Atoms/Panel',
   component: Panel,
   parameters: {
     layout: 'centered',

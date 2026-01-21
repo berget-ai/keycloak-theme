@@ -4,7 +4,7 @@ import { Button } from '../primitives/Button'
 import { Shield, Sparkles, Zap } from 'lucide-react'
 
 const meta = {
-  title: 'Design System/Blocks/HeroBlock',
+  title: 'Organisms/Hero Block',
   component: HeroBlock,
   parameters: {
     layout: 'fullscreen',

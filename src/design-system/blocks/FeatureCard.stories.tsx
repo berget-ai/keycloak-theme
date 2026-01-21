@@ -3,7 +3,7 @@ import { FeatureCard } from './FeatureCard'
 import { Cloud, Server, Zap, Database, Bot, Leaf, Shield, Heart } from 'lucide-react'
 
 const meta = {
-  title: 'Design System/Blocks/FeatureCard',
+  title: 'Organisms/Feature Card',
   component: FeatureCard,
   parameters: {
     layout: 'centered',

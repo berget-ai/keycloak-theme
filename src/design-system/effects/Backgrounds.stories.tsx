@@ -9,7 +9,7 @@ import { NetworkBackground } from './NetworkBackground'
  * See BACKGROUNDS.md for complete usage guide.
  */
 const meta = {
-  title: 'Design System/Effects/Backgrounds',
+  title: 'Utilities/Backgrounds',
   parameters: {
     layout: 'fullscreen',
     docs: {

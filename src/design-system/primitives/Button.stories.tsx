@@ -9,7 +9,7 @@ import { ArrowRight, Download, Loader2, Mail, Plus } from 'lucide-react'
  * principles in mind - clean, functional, and beautiful.
  */
 const meta = {
-  title: 'Design System/Primitives/Button',
+  title: 'Atoms/Button',
   component: Button,
   parameters: {
     layout: 'centered',
