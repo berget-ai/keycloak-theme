@@ -82,10 +82,10 @@
        - border-[hsl(var(--border-info))]      - Info borders
        ======================================================================== */
     
-    /* Base Borders - Console-inspired subtle borders */
-    --border: 0 0% 100% / 0.05;        /* rgba(255, 255, 255, 0.05) - Barely visible, console-style */
-    --border-hover: 0 0% 100% / 0.1;   /* rgba(255, 255, 255, 0.1) - Subtle hover brightening */
-    --border-strong: 0 0% 100% / 0.08; /* rgba(255, 255, 255, 0.08) - Slightly stronger */
+    /* Base Borders - Console-inspired subtle borders with warm Stone color */
+    --border: 45 15% 88% / 0.05;       /* Stone (E5DDD5) at 5% - warm, barely visible like console */
+    --border-hover: 45 15% 88% / 0.1;  /* Stone at 10% - subtle hover brightening */
+    --border-strong: 45 15% 88% / 0.08; /* Stone at 8% - slightly stronger */
     
     /* Themed Borders - For blocks with brand colors */
     --border-moss: 151 29% 49% / 0.2;    /* Moss green border */
