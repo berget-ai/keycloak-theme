@@ -199,7 +199,7 @@ export const BlogPageExample: StoryObj<typeof BlogGrid> = {
 
         {/* Load More */}
         <div className="text-center mt-12">
-          <button className="px-8 py-3 rounded-lg border border-white/20 hover:bg-white/5 transition-colors">
+          <button className="px-8 py-3 rounded-lg border border-[hsl(var(--border-hover))] hover:bg-white/5 transition-colors">
             Load More Articles
           </button>
         </div>

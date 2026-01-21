@@ -113,7 +113,7 @@ export const EmailTemplate = React.forwardRef<HTMLDivElement, EmailTemplateProps
 
           {/* Card */}
           <div
-            className="rounded-2xl border border-white/10 p-10"
+            className="rounded-2xl border border-[hsl(var(--border))] p-10"
             style={{
               background:
                 'linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(32, 32, 32, 0.9) 100%)',

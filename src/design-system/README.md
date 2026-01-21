@@ -372,6 +372,14 @@ All components follow WAI-ARIA guidelines:
   - Common mistakes to avoid
   - Pro tips and best practices
 
+- **[ICON-GUIDE.md](./ICON-GUIDE.md)** - Icon system guide
+  - Philosophy: Icons complement, don't compete
+  - Standard icon mappings (canonical choices)
+  - Color and style rules
+  - Sizing guidelines
+  - Usage patterns and examples
+  - Common mistakes to avoid
+
 ## License
 
 MIT

@@ -123,7 +123,7 @@ export const PricingCards = React.forwardRef<HTMLDivElement, PricingCardsProps>(
               'relative rounded-2xl border backdrop-blur-xl p-6 md:p-8 transition-all duration-300',
               tier.recommended
                 ? 'border-[hsl(var(--secondary))] bg-[hsl(var(--secondary))]/5 shadow-lg shadow-[hsl(var(--secondary))]/10 scale-105'
-                : 'border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/10'
+                : 'border-[hsl(var(--border))] bg-white/5 hover:border-[hsl(var(--border-hover))] hover:bg-white/10'
             )}
           >
             {tier.recommended && (

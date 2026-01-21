@@ -192,9 +192,9 @@ export const WithSuccess: Story = {
         id="success-input"
         type="email"
         value="user@example.com"
-        className="border-green-500 focus-visible:ring-green-500"
+        className="border-[hsl(var(--border-success))] focus-visible:ring-[hsl(var(--success))]"
       />
-      <p className="text-sm text-green-500">
+      <p className="text-sm text-[hsl(var(--success))]">
         ✓ Email address is valid.
       </p>
     </div>

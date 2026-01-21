@@ -229,7 +229,7 @@ export const AllVariants: Story = {
         <Button variant="link">Link</Button>
       </div>
       
-      <div className="border-t border-white/10 pt-4">
+      <div className="border-t border-[hsl(var(--border))] pt-4">
         <h3 className="text-sm font-medium text-white/60 mb-3">With Icons</h3>
         <div className="flex flex-wrap gap-3">
           <Button variant="default">
@@ -246,7 +246,7 @@ export const AllVariants: Story = {
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-4">
+      <div className="border-t border-[hsl(var(--border))] pt-4">
         <h3 className="text-sm font-medium text-white/60 mb-3">Sizes</h3>
         <div className="flex flex-wrap items-center gap-3">
           <Button size="sm">Small</Button>
@@ -255,7 +255,7 @@ export const AllVariants: Story = {
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-4">
+      <div className="border-t border-[hsl(var(--border))] pt-4">
         <h3 className="text-sm font-medium text-white/60 mb-3">States</h3>
         <div className="flex flex-wrap gap-3">
           <Button disabled>Disabled</Button>

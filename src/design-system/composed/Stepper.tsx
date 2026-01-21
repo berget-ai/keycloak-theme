@@ -148,7 +148,7 @@ export const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                           'border-[hsl(var(--secondary))] bg-[hsl(var(--secondary))] text-white',
                         isCurrent &&
                           'border-[hsl(var(--primary))] bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] ring-4 ring-[hsl(var(--primary))]/20',
-                        isUpcoming && 'border-white/20 bg-transparent text-white/40'
+                        isUpcoming && 'border-[hsl(var(--border))] bg-transparent text-white/40'
                       )}
                     >
                       {isCompleted ? (

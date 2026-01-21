@@ -46,7 +46,7 @@ type Story = StoryObj<typeof meta>
 
 // Demo content component
 const DemoContent = () => (
-  <div className="bg-white/5 border border-white/10 rounded-lg p-8">
+  <div className="bg-white/5 border border-[hsl(var(--border))] rounded-lg p-8">
     <h2 className="text-2xl font-medium mb-4">Container Content</h2>
     <p className="text-muted-foreground mb-4">
       This content is centered with consistent horizontal padding. Resize the browser window 
@@ -141,31 +141,31 @@ export const AllSizes: Story = {
   render: () => (
     <div className="min-h-screen bg-background py-12 space-y-8">
       <Container size="sm">
-        <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
+        <div className="bg-primary/10 border border-[hsl(var(--border-moss))] rounded-lg p-4">
           <p className="text-sm font-medium">Small (max-w-3xl / 768px)</p>
         </div>
       </Container>
       
       <Container size="md">
-        <div className="bg-secondary/10 border border-secondary/20 rounded-lg p-4">
+        <div className="bg-secondary/10 border border-[hsl(var(--border-sage))] rounded-lg p-4">
           <p className="text-sm font-medium">Medium (max-w-5xl / 1024px)</p>
         </div>
       </Container>
       
       <Container size="lg">
-        <div className="bg-accent/10 border border-accent/20 rounded-lg p-4">
+        <div className="bg-accent/10 border border-[hsl(var(--border-earth))] rounded-lg p-4">
           <p className="text-sm font-medium">Large (max-w-7xl / 1280px)</p>
         </div>
       </Container>
       
       <Container size="xl">
-        <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
+        <div className="bg-[#52B788]/10 border border-[hsl(var(--border-info))] rounded-lg p-4">
           <p className="text-sm font-medium">Extra Large (max-w-[1400px])</p>
         </div>
       </Container>
       
       <Container size="full">
-        <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
+        <div className="bg-[#FBB034]/10 border border-[hsl(var(--border-warning))] rounded-lg p-4">
           <p className="text-sm font-medium">Full Width (max-w-full)</p>
         </div>
       </Container>
@@ -229,7 +229,7 @@ export const DashboardLayout: Story = {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-lg p-6">
+              <div key={i} className="bg-white/5 border border-[hsl(var(--border))] rounded-lg p-6">
                 <h3 className="text-sm font-medium text-muted-foreground mb-2">Metric {i + 1}</h3>
                 <p className="text-3xl font-medium">1,234</p>
               </div>
@@ -237,19 +237,19 @@ export const DashboardLayout: Story = {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="bg-white/5 border border-white/10 rounded-lg p-6">
+            <div className="bg-white/5 border border-[hsl(var(--border))] rounded-lg p-6">
               <h3 className="text-lg font-medium mb-4">Recent Activity</h3>
               <div className="space-y-3">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm">
-                    <div className="w-2 h-2 rounded-full bg-green-500" />
+                    <div className="w-2 h-2 rounded-full bg-[hsl(var(--success))]" />
                     <span className="text-muted-foreground">Activity item {i + 1}</span>
                   </div>
                 ))}
               </div>
             </div>
             
-            <div className="bg-white/5 border border-white/10 rounded-lg p-6">
+            <div className="bg-white/5 border border-[hsl(var(--border))] rounded-lg p-6">
               <h3 className="text-lg font-medium mb-4">Usage Stats</h3>
               <div className="h-[200px] flex items-center justify-center text-muted-foreground">
                 Chart placeholder

@@ -62,7 +62,7 @@ type Story = StoryObj<typeof meta>
 
 // Demo boxes
 const DemoBox = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
-  <div className={`bg-primary/20 border border-primary/40 rounded-lg px-4 py-3 ${className}`}>
+  <div className={`bg-primary/20 border border-[hsl(var(--border-moss))] rounded-lg px-4 py-3 ${className}`}>
     {children}
   </div>
 )
@@ -331,7 +331,7 @@ export const CardContent: Story = {
           <Badge variant="outline">EU Region</Badge>
         </Stack>
         
-        <div className="h-px bg-border" />
+        <div className="h-px bg-[hsl(var(--border))]" />
         
         <Stack spacing="sm">
           <div className="flex justify-between text-sm">
@@ -364,7 +364,7 @@ export const Navigation: Story = {
       <Button variant="ghost">Models</Button>
       <Button variant="ghost">Deployments</Button>
       <Button variant="ghost">Analytics</Button>
-      <div className="h-6 w-px bg-border" />
+      <div className="h-6 w-px bg-[hsl(var(--border))]" />
       <Button variant="ghost">Settings</Button>
     </Stack>
   ),

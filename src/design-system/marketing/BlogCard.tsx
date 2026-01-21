@@ -119,7 +119,7 @@ export const BlogCard = React.forwardRef<HTMLDivElement, BlogCardProps>(
           variant === 'featured' &&
             'border-[hsl(var(--secondary))]/30 bg-[hsl(var(--secondary))]/5 hover:border-[hsl(var(--secondary))]/50',
           variant === 'default' &&
-            'border-white/10 bg-white/5 hover:border-white/20 hover:-translate-y-1',
+            'border-[hsl(var(--border))] bg-white/5 hover:border-[hsl(var(--border-hover))] hover:-translate-y-1',
           variant === 'minimal' &&
             'border-transparent bg-transparent hover:bg-white/5',
           className
@@ -203,7 +203,7 @@ export const BlogCard = React.forwardRef<HTMLDivElement, BlogCardProps>(
 
           {/* Read More */}
           {variant !== 'minimal' && (
-            <div className="mt-4 pt-4 border-t border-white/10">
+            <div className="mt-4 pt-4 border-t border-[hsl(var(--border))]">
               <div className="flex items-center gap-2 text-sm font-medium text-[hsl(var(--secondary))] group-hover:gap-3 transition-all">
                 Read More
                 <ArrowRight className="w-4 h-4" />

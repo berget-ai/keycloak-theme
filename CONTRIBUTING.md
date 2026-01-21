@@ -329,6 +329,52 @@ Before submitting a component:
 - [ ] Accessibility attributes are included
 - [ ] Component compiles without TypeScript errors
 
+## Icons
+
+**Always follow the icon system.** See [ICON-GUIDE.md](src/design-system/ICON-GUIDE.md) for complete guidelines.
+
+### Quick Rules
+
+```tsx
+// ✅ GOOD - Icon inherits text color
+<div className="text-white">
+  <Cloud className="w-5 h-5" />
+  <span>Serverless</span>
+</div>
+
+// ✅ GOOD - Brand color in marketing context
+<FeatureCard icon={Cloud} iconColor="text-[#52B788]" />
+
+// ✅ GOOD - Semantic icon in alert
+<Alert variant="success">
+  <CheckCircle className="w-4 h-4" />  {/* Inherits green */}
+</Alert>
+
+// ❌ BAD - Random colors
+<Cloud className="text-purple-500" />
+
+// ❌ BAD - Backgrounds on icons
+<div className="bg-blue-500 rounded-full p-2">
+  <Cloud />
+</div>
+```
+
+### Standard Icons (Always use these)
+
+- Success: `CheckCircle`
+- Error: `XCircle`
+- Warning: `AlertTriangle`
+- Info: `Info`
+- Cloud/Serverless: `Cloud`
+- Speed: `Zap`
+- Security: `Shield`
+- Close: `X`
+- Add: `Plus`
+
+See full list in [ICON-GUIDE.md](src/design-system/ICON-GUIDE.md).
+
+---
+
 ## Color & Border Usage
 
 ### Colors

@@ -48,13 +48,13 @@ export const SolidDark: StoryObj = {
           Use in dashboards, forms, and admin pages.
         </p>
         <div className="grid grid-cols-3 gap-4">
-          <div className="bg-white/5 p-6 rounded-lg border border-white/10">
+          <div className="bg-white/5 p-6 rounded-lg border border-[hsl(var(--border))]">
             <div className="text-sm text-white/60">Sample Card 1</div>
           </div>
-          <div className="bg-white/5 p-6 rounded-lg border border-white/10">
+          <div className="bg-white/5 p-6 rounded-lg border border-[hsl(var(--border))]">
             <div className="text-sm text-white/60">Sample Card 2</div>
           </div>
-          <div className="bg-white/5 p-6 rounded-lg border border-white/10">
+          <div className="bg-white/5 p-6 rounded-lg border border-[hsl(var(--border))]">
             <div className="text-sm text-white/60">Sample Card 3</div>
           </div>
         </div>
@@ -79,13 +79,13 @@ export const GridDefault: StoryObj = {
           while staying minimal and focused.
         </p>
         <div className="grid grid-cols-3 gap-4">
-          <div className="bg-white/5 p-6 rounded-lg border border-white/10">
+          <div className="bg-white/5 p-6 rounded-lg border border-[hsl(var(--border))]">
             <div className="text-sm text-white/60">Sample Card 1</div>
           </div>
-          <div className="bg-white/5 p-6 rounded-lg border border-white/10">
+          <div className="bg-white/5 p-6 rounded-lg border border-[hsl(var(--border))]">
             <div className="text-sm text-white/60">Sample Card 2</div>
           </div>
-          <div className="bg-white/5 p-6 rounded-lg border border-white/10">
+          <div className="bg-white/5 p-6 rounded-lg border border-[hsl(var(--border))]">
             <div className="text-sm text-white/60">Sample Card 3</div>
           </div>
         </div>
@@ -253,7 +253,7 @@ export const CombinedHero: StoryObj = {
     <GradientBackground variant="berget" className="flex items-center justify-center">
       <NetworkBackground opacity={0.3} nodeCount={40} />
       <div className="relative z-10 text-center max-w-3xl px-6">
-        <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-sm">
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-[hsl(var(--border-hover))] mb-6 backdrop-blur-sm">
           <span className="text-sm text-white/90">Maximum Visual Impact</span>
         </div>
         <h1 className="text-6xl mb-6 text-white font-light">
@@ -267,7 +267,7 @@ export const CombinedHero: StoryObj = {
           <button className="bg-white text-[#2D6A4F] px-8 py-3 rounded-lg font-medium hover:bg-white/90 transition-colors shadow-lg">
             Get Started
           </button>
-          <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors">
+          <button className="border-2 border-[hsl(var(--border-strong))] text-white px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors">
             Learn More
           </button>
         </div>

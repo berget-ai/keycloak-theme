@@ -146,7 +146,7 @@ export const SizeComparison: Story = {
  */
 export const InNavigation: Story = {
   render: () => (
-    <div className="w-full bg-background border-b border-white/10">
+    <div className="w-full bg-background border-b border-[hsl(var(--border))]">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Logo size={32} variant="light" />
@@ -183,17 +183,17 @@ export const LoginPage: Story = {
           <p className="text-muted-foreground">Sign in to your account</p>
         </div>
         
-        <div className="bg-white/5 border border-white/10 rounded-lg p-6">
+        <div className="bg-white/5 border border-[hsl(var(--border))] rounded-lg p-6">
           <div className="space-y-4">
             <input
               type="email"
               placeholder="Email"
-              className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm"
+              className="w-full h-10 rounded-md border border-[hsl(var(--border))] bg-background px-3 py-2 text-sm"
             />
             <input
               type="password"
               placeholder="Password"
-              className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm"
+              className="w-full h-10 rounded-md border border-[hsl(var(--border))] bg-background px-3 py-2 text-sm"
             />
             <button className="w-full h-10 rounded-md bg-primary text-primary-foreground font-medium">
               Sign In
@@ -229,7 +229,7 @@ export const HeroSection: Story = {
           <button className="h-12 px-8 rounded-md bg-primary text-primary-foreground font-medium">
             Get Started
           </button>
-          <button className="h-12 px-8 rounded-md border border-input hover:bg-white/5">
+          <button className="h-12 px-8 rounded-md border border-[hsl(var(--border))] hover:bg-white/5">
             Learn More
           </button>
         </div>
@@ -246,7 +246,7 @@ export const HeroSection: Story = {
  */
 export const FooterBranding: Story = {
   render: () => (
-    <footer className="w-full bg-background border-t border-white/10 p-8">
+    <footer className="w-full bg-background border-t border-[hsl(var(--border))] p-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
@@ -287,7 +287,7 @@ export const FooterBranding: Story = {
           </div>
         </div>
         
-        <div className="border-t border-white/10 mt-8 pt-8 text-sm text-muted-foreground text-center">
+        <div className="border-t border-[hsl(var(--border))] mt-8 pt-8 text-sm text-muted-foreground text-center">
           © 2026 Berget AI. All rights reserved.
         </div>
       </div>
@@ -304,7 +304,7 @@ export const FooterBranding: Story = {
 export const VariantComparison: Story = {
   render: () => (
     <div className="grid grid-cols-2 gap-8">
-      <div className="bg-background p-8 rounded-lg border border-white/10">
+      <div className="bg-background p-8 rounded-lg border border-[hsl(var(--border))]">
         <p className="text-sm text-muted-foreground mb-4">Light (on dark bg)</p>
         <Logo size={64} variant="light" />
       </div>
