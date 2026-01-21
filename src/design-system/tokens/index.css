@@ -289,4 +289,23 @@
       transparent 1px
     );
   }
+
+  /* ========================================================================
+     LIQUID GLASS EFFECT
+     ======================================================================== */
+  
+  /* Liquid Glass - Apple-inspired refraction effect using SVG filters
+     Works in Chromium browsers, falls back to regular blur in others */
+  .liquid-glass {
+    backdrop-filter: blur(12px) url(/liquid-glass-filters.svg#liquid-glass);
+    -webkit-backdrop-filter: blur(12px) url(/liquid-glass-filters.svg#liquid-glass);
+  }
+
+  /* Fallback for non-Chromium browsers */
+  @supports not (backdrop-filter: url(#test)) {
+    .liquid-glass {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  }
 }

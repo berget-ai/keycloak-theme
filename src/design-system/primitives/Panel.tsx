@@ -8,7 +8,7 @@ const panelVariants = cva(
     variants: {
       variant: {
         default: 'bg-[hsl(var(--card))] border border-[hsl(var(--border))]',
-        glass: 'bg-[hsl(var(--card))]/40 backdrop-blur-xl border border-[hsl(var(--border))]',
+        glass: 'bg-[hsl(var(--card))]/40 liquid-glass border border-[hsl(var(--border))]',
         elevated: 'bg-[hsl(var(--card))] border border-[hsl(var(--border))] shadow-lg hover:shadow-xl hover:-translate-y-1',
         flat: 'bg-[hsl(var(--card))]',
         outline: 'bg-transparent border border-[hsl(var(--border))]',
@@ -44,7 +44,7 @@ export interface PanelProps
  * 
  * **Variants:**
  * - `default` - Standard panel with border
- * - `glass` - Glass morphism with backdrop blur
+ * - `glass` - Liquid Glass morphism with refraction effect (Chromium) / backdrop blur (fallback)
  * - `elevated` - Shadow with hover lift effect
  * - `flat` - No border, subtle background
  * - `outline` - Transparent with border only
