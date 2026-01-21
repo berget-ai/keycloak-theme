@@ -62,6 +62,7 @@ document.head.appendChild(style);
 
 const preview: Preview = {
     parameters: {
+        layout: 'centered', // Default layout for all stories
         controls: {
             matchers: {
                 color: /(background|color)$/i,

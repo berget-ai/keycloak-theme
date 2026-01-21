@@ -86,10 +86,20 @@ export const Default: Story = {
  * Glass morphism variant with backdrop blur
  */
 export const Glass: Story = {
-  args: {
-    variant: 'glass',
-    children: (
-      <>
+  render: () => (
+    <div 
+      className="relative min-h-[400px] w-full flex items-center justify-center p-8"
+      style={{
+        background: 'linear-gradient(135deg, #52B788 0%, #2D6A4F 50%, #1B4332 100%)',
+        backgroundSize: '400% 400%',
+      }}
+    >
+      {/* Decorative elements to show blur effect */}
+      <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-[#74C69D] opacity-60" />
+      <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-[#E5DDD5] opacity-40" />
+      <div className="absolute top-1/2 right-20 w-24 h-24 rounded-full bg-[#52B788] opacity-50" />
+      
+      <Card variant="glass" className="relative z-10 max-w-md">
         <CardHeader>
           <CardTitle>Glass Card</CardTitle>
           <CardDescription>
@@ -98,11 +108,15 @@ export const Glass: Story = {
         </CardHeader>
         <CardContent>
           <p className="text-sm">
-            The glass variant creates a beautiful frosted glass effect.
+            The glass variant creates a beautiful frosted glass effect with backdrop-blur.
+            Notice how the background elements behind the card are blurred.
           </p>
         </CardContent>
-      </>
-    ),
+      </Card>
+    </div>
+  ),
+  parameters: {
+    layout: 'fullscreen',
   },
 }
 
@@ -227,8 +241,18 @@ export const PaddingSizes: Story = {
  */
 export const FeatureGrid: Story = {
   render: () => (
-    <div className="grid grid-cols-3 gap-4 w-[900px]">
-      <Card variant="glass" className="group hover:border-[hsl(var(--secondary))]/50">
+    <div 
+      className="relative p-8 min-h-[500px] flex items-center justify-center"
+      style={{
+        background: 'linear-gradient(135deg, #1B4332 0%, #2D6A4F 50%, #52B788 100%)',
+      }}
+    >
+      {/* Decorative background elements */}
+      <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-[#74C69D] opacity-20 blur-3xl" />
+      <div className="absolute bottom-20 right-20 w-48 h-48 rounded-full bg-[#E5DDD5] opacity-15 blur-2xl" />
+      
+      <div className="grid grid-cols-3 gap-4 w-[900px] relative z-10">
+        <Card variant="glass" className="group hover:border-[hsl(var(--secondary))]/50">
         <CardHeader>
           <div className="w-12 h-12 rounded-xl bg-[hsl(var(--secondary))]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <Shield className="w-6 h-6 text-[hsl(var(--secondary))]" />
@@ -270,7 +294,11 @@ export const FeatureGrid: Story = {
         </CardContent>
       </Card>
     </div>
+    </div>
   ),
+  parameters: {
+    layout: 'fullscreen',
+  },
 }
 
 /**
