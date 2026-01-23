@@ -92,6 +92,9 @@ export const Interactive: Story = {
  * All variants showcase
  */
 export const AllVariants: Story = {
+    args: {
+        children: ""
+    },
   render: () => (
     <div className="flex flex-col gap-4 w-[600px]">
       <Panel variant="default">
@@ -126,6 +129,9 @@ export const AllVariants: Story = {
  * Padding options
  */
 export const PaddingOptions: Story = {
+    args: {
+        children: ""
+    },
   render: () => (
     <div className="flex flex-col gap-4 w-[600px]">
       <Panel padding="none">
@@ -148,6 +154,9 @@ export const PaddingOptions: Story = {
  * Border radius variants - Console style with larger corners
  */
 export const RadiusVariants: Story = {
+    args: {
+        children: ""
+    },
   render: () => (
     <div className="flex flex-col gap-6 w-[600px]">
       <Panel radius="default" padding="lg">
@@ -182,6 +191,9 @@ export const RadiusVariants: Story = {
  * Bokeh effect comparison
  */
 export const BokehEffect: Story = {
+    args: {
+        children: ""
+    },
   render: () => (
     <div className="grid grid-cols-2 gap-6">
       <Panel bokeh={true} padding="lg" radius="lg">

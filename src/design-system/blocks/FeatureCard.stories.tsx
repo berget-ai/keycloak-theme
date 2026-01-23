@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { FeatureCard } from "./FeatureCard";
-import { Cloud, Server, Zap, Database, Bot, Leaf, Shield, Heart } from "lucide-react";
+import { Cloud, Server, Zap, Database, Bot, Leaf, Shield } from "lucide-react";
 
 const meta = {
     title: "Organisms/Feature Card",
@@ -167,6 +167,10 @@ export const WithoutFeatures: Story = {
  * Three-Column Grid (Products Page Pattern)
  */
 export const ThreeColumnGrid: Story = {
+    args: {
+        title: "",
+        features: []
+    },
     render: () => (
         <div className="w-full max-w-6xl px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -215,6 +219,10 @@ export const ThreeColumnGrid: Story = {
  * Benefits Section (Why Berget Pattern)
  */
 export const BenefitsSection: Story = {
+    args: {
+        title: "",
+        features: []
+    },
     render: () => (
         <div className="w-full max-w-6xl px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -253,6 +261,10 @@ export const BenefitsSection: Story = {
  * Two-Column Layout
  */
 export const TwoColumnLayout: Story = {
+    args: {
+        title: "",
+        features: []
+    },
     render: () => (
         <div className="w-full max-w-4xl px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

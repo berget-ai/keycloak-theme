@@ -40,11 +40,6 @@ The Card component is a flexible container for grouping related content and acti
             options: ["default", "glass", "elevated", "flat"],
             description: "Visual style variant of the card"
         },
-        padding: {
-            control: "select",
-            options: ["none", "sm", "default", "lg"],
-            description: "Padding size"
-        },
         withBokeh: {
             control: "boolean",
             description: "Enable animated Bokeh background effect"
@@ -87,6 +82,9 @@ export const Default: Story = {
  * Glass morphism variant with backdrop blur
  */
 export const Glass: Story = {
+    args: {
+        children: ""
+    },
     render: () => (
         <div
             className="relative min-h-[400px] w-full flex items-center justify-center p-8"
@@ -218,19 +216,17 @@ export const FeatureCard: Story = {
  * Showcase of different padding sizes
  */
 export const PaddingSizes: Story = {
+    args: {
+        children: ""
+    },
     render: () => (
         <div className="flex flex-col gap-4 w-80">
-            <Card padding="none">
-                <div className="p-4 bg-white/5">No padding wrapper</div>
+            <Card>
+                <div className="p-4 bg-white/5">Default padding</div>
             </Card>
-            <Card padding="sm">
-                <CardTitle>Small Padding</CardTitle>
-            </Card>
-            <Card padding="default">
-                <CardTitle>Default Padding</CardTitle>
-            </Card>
-            <Card padding="lg">
-                <CardTitle>Large Padding</CardTitle>
+            <Card>
+                <CardTitle>Card Title</CardTitle>
+                <CardDescription>With default padding</CardDescription>
             </Card>
         </div>
     )
@@ -240,6 +236,9 @@ export const PaddingSizes: Story = {
  * Grid of feature cards
  */
 export const FeatureGrid: Story = {
+    args: {
+        children: ""
+    },
     render: () => (
         <div
             className="relative p-8 min-h-[500px] flex items-center justify-center"
@@ -315,6 +314,9 @@ export const FeatureGrid: Story = {
  * All card variants showcase
  */
 export const AllVariants: Story = {
+    args: {
+        children: ""
+    },
     render: () => (
         <div className="grid grid-cols-2 gap-6 w-[800px]">
             <Card variant="default">

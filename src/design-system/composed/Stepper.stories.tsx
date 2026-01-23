@@ -4,6 +4,220 @@ import { Stepper, type Step } from "./Stepper";
 import { Button } from "../primitives/Button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
+// Wrapper components for interactive stories
+const InteractiveStepper = () => {
+    const [currentStep, setCurrentStep] = useState(0);
+
+    return (
+        <div className="min-h-screen p-8 flex items-center justify-center">
+            <div className="max-w-4xl w-full">
+                <Stepper
+                    steps={sampleSteps}
+                    currentStep={currentStep}
+                    onStepChange={setCurrentStep}
+                />
+
+                <div className="flex justify-between mt-8">
+                    <Button
+                        variant="outline"
+                        onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
+                        disabled={currentStep === 0}
+                    >
+                        <ArrowLeft className="mr-2 w-7 h-7" strokeWidth={2} />
+                        Back
+                    </Button>
+
+                    <Button
+                        variant="primary"
+                        onClick={() =>
+                            setCurrentStep(
+                                Math.min(sampleSteps.length - 1, currentStep + 1)
+                            )
+                        }
+                    >
+                        {currentStep === sampleSteps.length - 1 ? "Submit" : "Continue"}
+                        <ArrowRight className="ml-2 w-7 h-7" strokeWidth={2} />
+                    </Button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const RegistrationFlowExample = () => {
+    const [currentStep, setCurrentStep] = useState(0);
+
+    const registrationSteps: Step[] = [
+        {
+            id: "account",
+            label: "Account",
+            description: "Create your account",
+            content: <AccountStep />
+        },
+        {
+            id: "company",
+            label: "Company",
+            description: "Tell us about your business",
+            content: <CompanyStep />
+        },
+        {
+            id: "plan",
+            label: "Plan",
+            description: "Select your subscription",
+            content: <PlanStep />
+        }
+    ];
+
+    return (
+        <div className="min-h-screen p-8 flex items-center justify-center">
+            <div className="max-w-3xl w-full bg-card/40 backdrop-blur-xl rounded-2xl p-8 border border-[hsl(var(--border))]">
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl font-medium mb-2">Create Account</h2>
+                    <p className="text-white/60">
+                        Step {currentStep + 1} of {registrationSteps.length}
+                    </p>
+                </div>
+
+                <Stepper
+                    steps={registrationSteps}
+                    currentStep={currentStep}
+                    onStepChange={setCurrentStep}
+                />
+
+                <div className="flex justify-between mt-8 pt-6 border-t border-white/10">
+                    {currentStep > 0 ? (
+                        <Button
+                            variant="outline"
+                            onClick={() => setCurrentStep(currentStep - 1)}
+                        >
+                            <ArrowLeft className="mr-2 w-7 h-7" strokeWidth={2} />
+                            Back
+                        </Button>
+                    ) : (
+                        <div />
+                    )}
+
+                    <Button
+                        variant="primary"
+                        onClick={() => {
+                            if (currentStep < registrationSteps.length - 1) {
+                                setCurrentStep(currentStep + 1);
+                            } else {
+                                alert("Registration complete!");
+                            }
+                        }}
+                    >
+                        {currentStep === registrationSteps.length - 1
+                            ? "Complete"
+                            : "Continue"}
+                        <ArrowRight className="ml-2 w-7 h-7" strokeWidth={2} />
+                    </Button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const CheckoutFlowExample = () => {
+    const [currentStep, setCurrentStep] = useState(0);
+
+    const checkoutSteps: Step[] = [
+        {
+            id: "cart",
+            label: "Cart",
+            content: (
+                <div className="p-6">
+                    <h3 className="text-2xl font-medium mb-4">Shopping Cart</h3>
+                    <div className="space-y-3">
+                        <div className="p-4 bg-white/5 rounded-lg flex justify-between">
+                            <span>Product 1</span>
+                            <span>$29</span>
+                        </div>
+                        <div className="p-4 bg-white/5 rounded-lg flex justify-between">
+                            <span>Product 2</span>
+                            <span>$49</span>
+                        </div>
+                    </div>
+                </div>
+            )
+        },
+        {
+            id: "shipping",
+            label: "Shipping",
+            content: (
+                <div className="p-6">
+                    <h3 className="text-2xl font-medium mb-4">Shipping Address</h3>
+                    <div className="space-y-3">
+                        <input
+                            placeholder="Street Address"
+                            className="w-full px-4 py-3 bg-black/30 border border-white/10 rounded-lg"
+                        />
+                        <div className="grid grid-cols-2 gap-3">
+                            <input
+                                placeholder="City"
+                                className="px-4 py-3 bg-black/30 border border-white/10 rounded-lg"
+                            />
+                            <input
+                                placeholder="Postal Code"
+                                className="px-4 py-3 bg-black/30 border border-white/10 rounded-lg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            )
+        },
+        {
+            id: "payment",
+            label: "Payment",
+            content: (
+                <div className="p-6">
+                    <h3 className="text-2xl font-medium mb-4">Payment Method</h3>
+                    <div className="p-4 bg-white/5 rounded-lg">
+                        <div className="text-sm text-white/60">Credit Card</div>
+                        <input
+                            placeholder="Card Number"
+                            className="w-full mt-2 px-4 py-3 bg-black/30 border border-white/10 rounded-lg"
+                        />
+                    </div>
+                </div>
+            )
+        }
+    ];
+
+    return (
+        <div className="min-h-screen p-8 flex items-center justify-center">
+            <div className="max-w-2xl w-full">
+                <Stepper
+                    steps={checkoutSteps}
+                    currentStep={currentStep}
+                    onStepChange={setCurrentStep}
+                />
+
+                <div className="flex justify-between mt-8">
+                    <Button
+                        variant="ghost"
+                        onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
+                        disabled={currentStep === 0}
+                    >
+                        Back
+                    </Button>
+
+                    <Button
+                        variant="primary"
+                        onClick={() =>
+                            setCurrentStep(
+                                Math.min(checkoutSteps.length - 1, currentStep + 1)
+                            )
+                        }
+                    >
+                        {currentStep === checkoutSteps.length - 1 ? "Pay Now" : "Next"}
+                    </Button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const meta = {
     title: "Organisms/Stepper",
     component: Stepper,
@@ -148,68 +362,21 @@ const sampleSteps: Step[] = [
  * Interactive Stepper with Navigation
  */
 export const Interactive: Story = {
-    render: () => {
-        const [currentStep, setCurrentStep] = useState(0);
-
-        return (
-            <div className="min-h-screen p-8 flex items-center justify-center">
-                <div className="max-w-4xl w-full">
-                    <Stepper
-                        steps={sampleSteps}
-                        currentStep={currentStep}
-                        onStepChange={setCurrentStep}
-                    />
-
-                    <div className="flex justify-between mt-8">
-                        <Button
-                            variant="outline"
-                            onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
-                            disabled={currentStep === 0}
-                        >
-                            <ArrowLeft className="mr-2 w-7 h-7" strokeWidth={2} />
-                            Back
-                        </Button>
-
-                        <Button
-                            variant="primary"
-                            onClick={() =>
-                                setCurrentStep(
-                                    Math.min(sampleSteps.length - 1, currentStep + 1)
-                                )
-                            }
-                            disabled={currentStep === sampleSteps.length - 1}
-                        >
-                            {currentStep === sampleSteps.length - 1
-                                ? "Submit"
-                                : "Continue"}
-                            <ArrowRight className="ml-2 w-7 h-7" strokeWidth={2} />
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    args: {
+        steps: sampleSteps,
+        currentStep: 0
+    },
+    render: () => <InteractiveStepper />
 };
 
 /**
  * Minimal variant without descriptions
  */
 export const Minimal: Story = {
-    render: () => {
-        const [currentStep, setCurrentStep] = useState(1);
-
-        return (
-            <div className="min-h-screen p-8 flex items-center justify-center">
-                <div className="max-w-4xl w-full">
-                    <Stepper
-                        steps={sampleSteps}
-                        currentStep={currentStep}
-                        onStepChange={setCurrentStep}
-                        variant="minimal"
-                    />
-                </div>
-            </div>
-        );
+    args: {
+        steps: sampleSteps,
+        currentStep: 1,
+        variant: "minimal"
     }
 };
 
@@ -217,21 +384,10 @@ export const Minimal: Story = {
  * Without step numbers
  */
 export const WithoutNumbers: Story = {
-    render: () => {
-        const [currentStep, setCurrentStep] = useState(2);
-
-        return (
-            <div className="min-h-screen p-8 flex items-center justify-center">
-                <div className="max-w-4xl w-full">
-                    <Stepper
-                        steps={sampleSteps}
-                        currentStep={currentStep}
-                        onStepChange={setCurrentStep}
-                        showNumbers={false}
-                    />
-                </div>
-            </div>
-        );
+    args: {
+        steps: sampleSteps,
+        currentStep: 2,
+        showNumbers: false
     }
 };
 
@@ -239,184 +395,20 @@ export const WithoutNumbers: Story = {
  * Registration Flow Example
  */
 export const RegistrationFlow: Story = {
-    render: () => {
-        const [currentStep, setCurrentStep] = useState(0);
-
-        const registrationSteps: Step[] = [
-            {
-                id: "account",
-                label: "Account",
-                description: "Create your account",
-                content: <AccountStep />
-            },
-            {
-                id: "company",
-                label: "Company",
-                description: "Tell us about your business",
-                content: <CompanyStep />
-            },
-            {
-                id: "plan",
-                label: "Plan",
-                description: "Select your subscription",
-                content: <PlanStep />
-            }
-        ];
-
-        return (
-            <div className="min-h-screen p-8 flex items-center justify-center">
-                <div className="max-w-3xl w-full bg-card/40 backdrop-blur-xl rounded-2xl p-8 border border-[hsl(var(--border))]">
-                    <div className="text-center mb-8">
-                        <h2 className="text-3xl font-medium mb-2">Create Account</h2>
-                        <p className="text-white/60">
-                            Step {currentStep + 1} of {registrationSteps.length}
-                        </p>
-                    </div>
-
-                    <Stepper
-                        steps={registrationSteps}
-                        currentStep={currentStep}
-                        onStepChange={setCurrentStep}
-                    />
-
-                    <div className="flex justify-between mt-8 pt-6 border-t border-white/10">
-                        {currentStep > 0 ? (
-                            <Button
-                                variant="outline"
-                                onClick={() => setCurrentStep(currentStep - 1)}
-                            >
-                                <ArrowLeft className="mr-2 w-7 h-7" strokeWidth={2} />
-                                Back
-                            </Button>
-                        ) : (
-                            <div />
-                        )}
-
-                        <Button
-                            variant="primary"
-                            onClick={() => {
-                                if (currentStep < registrationSteps.length - 1) {
-                                    setCurrentStep(currentStep + 1);
-                                } else {
-                                    alert("Registration complete!");
-                                }
-                            }}
-                        >
-                            {currentStep === registrationSteps.length - 1
-                                ? "Complete"
-                                : "Continue"}
-                            <ArrowRight className="ml-2 w-7 h-7" strokeWidth={2} />
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    args: {
+        steps: [],
+        currentStep: 0
+    },
+    render: () => <RegistrationFlowExample />
 };
 
 /**
  * Checkout Flow Example
  */
 export const CheckoutFlow: Story = {
-    render: () => {
-        const [currentStep, setCurrentStep] = useState(0);
-
-        const checkoutSteps: Step[] = [
-            {
-                id: "cart",
-                label: "Cart",
-                content: (
-                    <div className="p-6">
-                        <h3 className="text-2xl font-medium mb-4">Shopping Cart</h3>
-                        <div className="space-y-3">
-                            <div className="p-4 bg-white/5 rounded-lg flex justify-between">
-                                <span>Product 1</span>
-                                <span>$29</span>
-                            </div>
-                            <div className="p-4 bg-white/5 rounded-lg flex justify-between">
-                                <span>Product 2</span>
-                                <span>$49</span>
-                            </div>
-                        </div>
-                    </div>
-                )
-            },
-            {
-                id: "shipping",
-                label: "Shipping",
-                content: (
-                    <div className="p-6">
-                        <h3 className="text-2xl font-medium mb-4">Shipping Address</h3>
-                        <div className="space-y-3">
-                            <input
-                                placeholder="Street Address"
-                                className="w-full px-4 py-3 bg-black/30 border border-white/10 rounded-lg"
-                            />
-                            <div className="grid grid-cols-2 gap-3">
-                                <input
-                                    placeholder="City"
-                                    className="px-4 py-3 bg-black/30 border border-white/10 rounded-lg"
-                                />
-                                <input
-                                    placeholder="Postal Code"
-                                    className="px-4 py-3 bg-black/30 border border-white/10 rounded-lg"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                )
-            },
-            {
-                id: "payment",
-                label: "Payment",
-                content: (
-                    <div className="p-6">
-                        <h3 className="text-2xl font-medium mb-4">Payment Method</h3>
-                        <div className="p-4 bg-white/5 rounded-lg">
-                            <div className="text-sm text-white/60">Credit Card</div>
-                            <input
-                                placeholder="Card Number"
-                                className="w-full mt-2 px-4 py-3 bg-black/30 border border-white/10 rounded-lg"
-                            />
-                        </div>
-                    </div>
-                )
-            }
-        ];
-
-        return (
-            <div className="min-h-screen p-8 flex items-center justify-center">
-                <div className="max-w-2xl w-full">
-                    <Stepper
-                        steps={checkoutSteps}
-                        currentStep={currentStep}
-                        onStepChange={setCurrentStep}
-                    />
-
-                    <div className="flex justify-between mt-8">
-                        <Button
-                            variant="ghost"
-                            onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
-                            disabled={currentStep === 0}
-                        >
-                            Back
-                        </Button>
-
-                        <Button
-                            variant="primary"
-                            onClick={() =>
-                                setCurrentStep(
-                                    Math.min(checkoutSteps.length - 1, currentStep + 1)
-                                )
-                            }
-                        >
-                            {currentStep === checkoutSteps.length - 1
-                                ? "Pay Now"
-                                : "Next"}
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    args: {
+        steps: [],
+        currentStep: 0
+    },
+    render: () => <CheckoutFlowExample />
 };
