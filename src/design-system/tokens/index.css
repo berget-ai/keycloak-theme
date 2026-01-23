@@ -19,52 +19,52 @@
    ============================================================================ */
 
 @layer base {
-  /* ========================================================================
+    /* ========================================================================
      COLOR TOKENS
      ======================================================================== */
-  
-  :root {
-    /* Brand Colors - Berget Natural Palette */
-    --berget-stone: 45 15% 88%;        /* #E5DDD5 - Primary brand color */
-    --berget-moss: 151 29% 49%;        /* #60A580 - Nature accent */
-    --berget-sage: 151 33% 62%;        /* #8EB29F - Secondary green */
-    --berget-earth: 30 8% 20%;         /* #342F2D - Dark earth tone */
-    
-    /* Semantic Colors - Dark Theme (Console-inspired) */
-    --background: 0 0% 4%;             /* #0A0A0A - Deep black background (console main) */
-    --foreground: 0 0% 100%;           /* #FFFFFF - Pure white text */
-    
-    --card: 0 0% 7%;                   /* #121212 - Card background (console cards) */
-    --card-foreground: 0 0% 100%;      /* #FFFFFF - Card text */
-    
-    --popover: 0 0% 8%;                /* #141414 - Popover background */
-    --popover-foreground: 0 0% 100%;   /* #FFFFFF - Popover text */
-    
-    --primary: 45 15% 88%;             /* Stone - Primary actions (Berget brand) */
-    --primary-foreground: 0 0% 4%;     /* Deep black text on primary */
-    
-    --secondary: 151 29% 49%;          /* Moss - Secondary actions */
-    --secondary-foreground: 0 0% 100%; /* White text on secondary */
-    
-    --accent: 151 33% 62%;             /* Sage - Accents and highlights */
-    --accent-foreground: 0 0% 4%;      /* Deep black text on accent */
-    
-    --muted: 0 0% 10%;                 /* #1A1A1A - Muted backgrounds (console sidebar) */
-    --muted-foreground: 0 0% 65%;      /* #A6A6A6 - Muted text (slightly brighter) */
-    
-    --destructive: 0 72% 51%;          /* Error/destructive actions */
-    --destructive-foreground: 0 0% 100%;
-    
-    --success: 142 71% 45%;            /* Success states */
-    --success-foreground: 0 0% 100%;
-    
-    --warning: 38 92% 50%;             /* Warning states */
-    --warning-foreground: 0 0% 10%;
-    
-    --info: 217 91% 60%;               /* Info states */
-    --info-foreground: 0 0% 100%;
-    
-    /* ========================================================================
+
+    :root {
+        /* Brand Colors - Berget Natural Palette */
+        --berget-stone: 45 15% 88%; /* #E5DDD5 - Primary brand color */
+        --berget-moss: 151 29% 49%; /* #60A580 - Nature accent */
+        --berget-sage: 151 33% 62%; /* #8EB29F - Secondary green */
+        --berget-earth: 30 8% 20%; /* #342F2D - Dark earth tone */
+
+        /* Semantic Colors - Dark Theme (Console-inspired) */
+        --background: 0 0% 4%; /* #0A0A0A - Deep black background (console main) */
+        --foreground: 0 0% 100%; /* #FFFFFF - Pure white text */
+
+        --card: 0 0% 7%; /* #121212 - Card background (console cards) */
+        --card-foreground: 0 0% 100%; /* #FFFFFF - Card text */
+
+        --popover: 0 0% 8%; /* #141414 - Popover background */
+        --popover-foreground: 0 0% 100%; /* #FFFFFF - Popover text */
+
+        --primary: 45 15% 88%; /* Stone - Primary actions (Berget brand) */
+        --primary-foreground: 0 0% 4%; /* Deep black text on primary */
+
+        --secondary: 151 29% 49%; /* Moss - Secondary actions */
+        --secondary-foreground: 0 0% 100%; /* White text on secondary */
+
+        --accent: 151 33% 62%; /* Sage - Accents and highlights */
+        --accent-foreground: 0 0% 4%; /* Deep black text on accent */
+
+        --muted: 0 0% 10%; /* #1A1A1A - Muted backgrounds (console sidebar) */
+        --muted-foreground: 0 0% 65%; /* #A6A6A6 - Muted text (slightly brighter) */
+
+        --destructive: 0 72% 51%; /* Error/destructive actions */
+        --destructive-foreground: 0 0% 100%;
+
+        --success: 142 71% 45%; /* Success states */
+        --success-foreground: 0 0% 100%;
+
+        --warning: 38 92% 50%; /* Warning states */
+        --warning-foreground: 0 0% 10%;
+
+        --info: 217 91% 60%; /* Info states */
+        --info-foreground: 0 0% 100%;
+
+        /* ========================================================================
        BORDER TOKENS - Semantic Border System
        ========================================================================
        
@@ -81,278 +81,288 @@
        - border-[hsl(var(--border-destructive))] - Error borders
        - border-[hsl(var(--border-info))]      - Info borders
        ======================================================================== */
-    
-    /* Base Borders - Console-inspired subtle borders with warm Stone color */
-    --border: 45 15% 88% / 0.05;       /* Stone (E5DDD5) at 5% - warm, barely visible like console */
-    --border-hover: 45 15% 88% / 0.1;  /* Stone at 10% - subtle hover brightening */
-    --border-strong: 45 15% 88% / 0.08; /* Stone at 8% - slightly stronger */
-    
-    /* Themed Borders - For blocks with brand colors */
-    --border-moss: 151 29% 49% / 0.2;    /* Moss green border */
-    --border-sage: 151 33% 62% / 0.2;    /* Sage green border */
-    --border-earth: 151 44% 31% / 0.2;   /* Earth tone border */
-    --border-stone: 45 15% 88% / 0.2;    /* Stone border */
-    
-    /* State Borders - For alerts and status */
-    --border-success: 142 71% 45% / 0.5;    /* Success/positive */
-    --border-warning: 38 92% 50% / 0.5;     /* Warning/caution */
-    --border-destructive: 0 72% 51% / 0.5;  /* Error/danger */
-    --border-info: 217 91% 60% / 0.5;       /* Informational */
-    
-    /* Input Borders */
-    --input: 0 0% 15%;                 /* Input backgrounds */
-    --ring: 45 15% 88%;                /* Focus ring color */
-    
-    /* Special Effects */
-    --grid-line: rgba(229, 221, 213, 0.02);  /* Subtle grid lines */
-    --glass: rgba(26, 26, 26, 0.4);          /* Glass morphism */
-    --glow: rgba(229, 221, 213, 0.1);        /* Glow effects */
-  }
 
-  /* Light Theme */
-  :root.light,
-  [data-theme='light'] {
-    --background: 0 0% 96%;            /* Light background */
-    --foreground: 0 0% 10%;            /* Dark text */
-    
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
-    
-    --primary: 151 29% 49%;            /* Moss in light mode */
-    --primary-foreground: 0 0% 100%;
-    
-    --secondary: 151 33% 62%;
-    --secondary-foreground: 0 0% 10%;
-    
-    --accent: 45 15% 88%;
-    --accent-foreground: 0 0% 10%;
-    
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 40%;
-    
-    /* Light Theme Borders */
-    --border: 0 0% 0% / 0.1;           /* rgba(0, 0, 0, 0.1) - Subtle dark border */
-    --border-hover: 0 0% 0% / 0.2;     /* rgba(0, 0, 0, 0.2) - Hover */
-    --border-strong: 0 0% 0% / 0.15;   /* rgba(0, 0, 0, 0.15) - Stronger */
-    
-    /* Themed borders stay same in light mode */
-    --border-moss: 151 29% 49% / 0.3;
-    --border-sage: 151 33% 62% / 0.3;
-    --border-earth: 151 44% 31% / 0.3;
-    --border-stone: 45 15% 88% / 0.3;
-    
-    --input: 0 0% 90%;
-    --ring: 151 29% 49%;
-  }
+        /* Base Borders - Console-inspired subtle borders with warm Stone color */
+        --border: 45 15% 88% / 0.05; /* Stone (E5DDD5) at 5% - warm, barely visible like console */
+        --border-hover: 45 15% 88% / 0.1; /* Stone at 10% - subtle hover brightening */
+        --border-strong: 45 15% 88% / 0.08; /* Stone at 8% - slightly stronger */
 
-  /* ========================================================================
+        /* Themed Borders - For blocks with brand colors */
+        --border-moss: 151 29% 49% / 0.2; /* Moss green border */
+        --border-sage: 151 33% 62% / 0.2; /* Sage green border */
+        --border-earth: 151 44% 31% / 0.2; /* Earth tone border */
+        --border-stone: 45 15% 88% / 0.2; /* Stone border */
+
+        /* State Borders - For alerts and status */
+        --border-success: 142 71% 45% / 0.5; /* Success/positive */
+        --border-warning: 38 92% 50% / 0.5; /* Warning/caution */
+        --border-destructive: 0 72% 51% / 0.5; /* Error/danger */
+        --border-info: 217 91% 60% / 0.5; /* Informational */
+
+        /* Input Borders */
+        --input: 0 0% 15%; /* Input backgrounds */
+        --ring: 45 15% 88%; /* Focus ring color */
+
+        /* Special Effects */
+        --grid-line: rgba(229, 221, 213, 0.02); /* Subtle grid lines */
+        --glass: rgba(26, 26, 26, 0.4); /* Glass morphism */
+        --glow: rgba(229, 221, 213, 0.1); /* Glow effects */
+    }
+
+    /* Light Theme */
+    :root.light,
+    [data-theme="light"] {
+        --background: 0 0% 96%; /* Light background */
+        --foreground: 0 0% 10%; /* Dark text */
+
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 10%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 10%;
+
+        --primary: 151 29% 49%; /* Moss in light mode */
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 151 33% 62%;
+        --secondary-foreground: 0 0% 10%;
+
+        --accent: 45 15% 88%;
+        --accent-foreground: 0 0% 10%;
+
+        --muted: 0 0% 90%;
+        --muted-foreground: 0 0% 40%;
+
+        /* Light Theme Borders */
+        --border: 0 0% 0% / 0.1; /* rgba(0, 0, 0, 0.1) - Subtle dark border */
+        --border-hover: 0 0% 0% / 0.2; /* rgba(0, 0, 0, 0.2) - Hover */
+        --border-strong: 0 0% 0% / 0.15; /* rgba(0, 0, 0, 0.15) - Stronger */
+
+        /* Themed borders stay same in light mode */
+        --border-moss: 151 29% 49% / 0.3;
+        --border-sage: 151 33% 62% / 0.3;
+        --border-earth: 151 44% 31% / 0.3;
+        --border-stone: 45 15% 88% / 0.3;
+
+        --input: 0 0% 90%;
+        --ring: 151 29% 49%;
+    }
+
+    /* ========================================================================
      TYPOGRAPHY
      ======================================================================== */
-  
-  * {
-    @apply antialiased;
-  }
-  
-  html {
-    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  body {
-    @apply bg-background text-foreground;
-    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Ovo", Georgia, serif;
-    letter-spacing: -0.04em;
-  }
 
-  /* ========================================================================
+    * {
+        @apply antialiased;
+    }
+
+    /* Ensure icons inherit text color correctly */
+    svg {
+        color: currentColor;
+    }
+
+    html {
+        font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-family:
+            "DM Sans",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Ovo", Georgia, serif;
+        letter-spacing: -0.04em;
+    }
+
+    /* ========================================================================
      ANIMATIONS
      ======================================================================== */
-  
-  @keyframes bokeh-float {
-    0%, 100% {
-      transform: translate(0, 0) scale(1);
-      opacity: 0.3;
-    }
-    33% {
-      transform: translate(30px, -30px) scale(1.1);
-      opacity: 0.4;
-    }
-    66% {
-      transform: translate(-20px, 20px) scale(0.9);
-      opacity: 0.3;
-    }
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes shimmer {
-    0% {
-      background-position: -200% 0;
-    }
-    100% {
-      background-position: 200% 0;
-    }
-  }
-  
-  @keyframes gradient-flow {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-  
-  /* Animation classes */
-  .animate-bokeh-float {
-    animation: bokeh-float 20s ease-in-out infinite;
-  }
-  
-  .animate-fade-in {
-    animation: fadeIn 0.5s ease-out;
-  }
-  
-  .animate-slide-up {
-    animation: slideUp 0.6s ease-out;
-  }
-  
-  .animate-shimmer {
-    animation: shimmer 2s linear infinite;
-  }
-  
-  .animate-gradient-flow {
-    animation: gradient-flow 15s ease infinite;
-    background-size: 200% 200%;
-  }
 
-  /* ========================================================================
+    @keyframes bokeh-float {
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+            opacity: 0.3;
+        }
+        33% {
+            transform: translate(30px, -30px) scale(1.1);
+            opacity: 0.4;
+        }
+        66% {
+            transform: translate(-20px, 20px) scale(0.9);
+            opacity: 0.3;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes shimmer {
+        0% {
+            background-position: -200% 0;
+        }
+        100% {
+            background-position: 200% 0;
+        }
+    }
+
+    @keyframes gradient-flow {
+        0%,
+        100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
+    /* Animation classes */
+    .animate-bokeh-float {
+        animation: bokeh-float 20s ease-in-out infinite;
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    .animate-slide-up {
+        animation: slideUp 0.6s ease-out;
+    }
+
+    .animate-shimmer {
+        animation: shimmer 2s linear infinite;
+    }
+
+    .animate-gradient-flow {
+        animation: gradient-flow 15s ease infinite;
+        background-size: 200% 200%;
+    }
+
+    /* ========================================================================
      BOKEH EFFECT - Organic lighting for panels (console-style)
      ======================================================================== */
-  
-  .bokeh {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.5;
-    filter: blur(60px);
-  }
-  
-  .bokeh-circle {
-    position: absolute;
-    border-radius: 50%;
-    animation: bokeh-float 20s ease-in-out infinite;
-    background: radial-gradient(
-      circle at center,
-      var(--color) 0%,
-      transparent 70%
-    );
-  }
 
-  /* ========================================================================
+    .bokeh {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.5;
+        filter: blur(60px);
+    }
+
+    .bokeh-circle {
+        position: absolute;
+        border-radius: 50%;
+        animation: bokeh-float 20s ease-in-out infinite;
+        background: radial-gradient(circle at center, var(--color) 0%, transparent 70%);
+    }
+
+    /* ========================================================================
      GRID BACKGROUND
      ======================================================================== */
-  
-  .bg-grid-white\/5 {
-    background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px
-    );
-  }
 
-  /* ========================================================================
+    .bg-grid-white\/5 {
+        background-image: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0.05) 1px,
+                transparent 1px
+            ),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+
+    /* ========================================================================
      LIQUID GLASS EFFECT
      ======================================================================== */
-  
-  /* Liquid Glass - Apple-inspired refraction effect using SVG filters
+
+    /* Liquid Glass - Apple-inspired refraction effect using SVG filters
      Works in Chromium browsers, falls back to regular blur in others */
-  .liquid-glass {
-    backdrop-filter: blur(12px) url(/liquid-glass-filters.svg#liquid-glass);
-    -webkit-backdrop-filter: blur(12px) url(/liquid-glass-filters.svg#liquid-glass);
-  }
-
-  /* Fallback for non-Chromium browsers */
-  @supports not (backdrop-filter: url(#test)) {
     .liquid-glass {
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px) url(/liquid-glass-filters.svg#liquid-glass);
+        -webkit-backdrop-filter: blur(12px) url(/liquid-glass-filters.svg#liquid-glass);
     }
-  }
 
-  /* ========================================================================
+    /* Fallback for non-Chromium browsers */
+    @supports not (backdrop-filter: url(#test)) {
+        .liquid-glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    }
+
+    /* ========================================================================
      PANEL GLOW - Organic border lighting effect (console-inspired)
      ======================================================================== */
-  
-  /* Very subtle static glow - barely visible like console */
-  .panel-glow {
-    box-shadow:
-      0 0 0 1px rgba(229, 221, 213, 0.02),
-      0 0 20px -10px rgba(229, 221, 213, 0.01);
-  }
 
-  /* Enhanced glow on hover - borders feel alive but still subtle */
-  .panel-glow-hover:hover {
-    box-shadow:
-      0 0 0 1px rgba(229, 221, 213, 0.05),
-      0 20px 40px -20px rgba(0, 0, 0, 0.5),
-      0 0 50px -12px rgba(229, 221, 213, 0.02);
-  }
+    /* Very subtle static glow - barely visible like console */
+    .panel-glow {
+        box-shadow:
+            0 0 0 1px rgba(229, 221, 213, 0.02),
+            0 0 20px -10px rgba(229, 221, 213, 0.01);
+    }
 
-  /* ========================================================================
+    /* Enhanced glow on hover - borders feel alive but still subtle */
+    .panel-glow-hover:hover {
+        box-shadow:
+            0 0 0 1px rgba(229, 221, 213, 0.05),
+            0 20px 40px -20px rgba(0, 0, 0, 0.5),
+            0 0 50px -12px rgba(229, 221, 213, 0.02);
+    }
+
+    /* ========================================================================
      SCROLLBAR STYLING
      ======================================================================== */
-  
-  /* Thin scrollbar */
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
 
-  .scrollbar-thumb-white\/20::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-  }
+    /* Thin scrollbar */
+    .scrollbar-thin::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
 
-  .scrollbar-thumb-white\/20::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
+    .scrollbar-thumb-white\/20::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+    }
 
-  .scrollbar-track-transparent::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
+    .scrollbar-thumb-white\/20::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .scrollbar-track-transparent::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
 }

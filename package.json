@@ -1,69 +1,71 @@
 {
-    "name": "@berget/design-system",
-    "version": "2.0.0",
-    "description": "Berget Design System - Scandinavian-inspired design system with console aesthetic",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/berget-ai/berget-design-system.git"
-    },
-    "type": "module",
-    "scripts": {
-        "postinstall": "keycloakify sync-extensions",
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "build-keycloak-theme": "npm run build && keycloakify build",
-        "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build -o storybook-static",
-        "format": "prettier . --write"
-    },
-    "license": "MIT",
-    "keywords": [
-        "design-system",
-        "berget",
-        "react",
-        "typescript",
-        "tailwindcss",
-        "storybook",
-        "console-style",
-        "scandinavian-design"
-    ],
-    "dependencies": {
-        "@fontsource/dm-sans": "^5.2.8",
-        "@fontsource/ovo": "^5.2.8",
-        "@keycloakify/email-native": "~260007.0.0",
-        "@radix-ui/react-slot": "^1.2.4",
-        "class-variance-authority": "^0.7.0",
-        "clsx": "^2.1.1",
-        "keycloakify": "^11.13.0",
-        "lucide-react": "^0.427.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "tailwind-merge": "^2.5.2"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.15.0",
-        "@storybook/react-vite": "^10.1.2",
-        "@types/react": "^18.2.43",
-        "@types/react-dom": "^18.2.17",
-        "@typescript-eslint/eslint-plugin": "^8.15.0",
-        "@typescript-eslint/parser": "^8.15.0",
-        "@vitejs/plugin-react": "^4.2.1",
-        "autoprefixer": "^10.4.20",
-        "eslint": "^9.15.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-react": "^7.37.2",
-        "eslint-plugin-react-hooks": "^5.0.0",
-        "eslint-plugin-react-refresh": "^0.4.14",
-        "eslint-plugin-storybook": "^10.1.2",
-        "globals": "^15.12.0",
-        "prettier": "3.3.1",
-        "storybook": "^10.1.2",
-        "tailwindcss": "^3.4.14",
-        "typescript": "^5.2.2",
-        "typescript-eslint": "^8.15.0",
-        "vite": "^5.0.8"
-    },
-    "engines": {
-        "node": "^18.0.0 || >=20.0.0"
-    }
+  "name": "@berget/design-system",
+  "version": "2.0.0",
+  "description": "Berget Design System - Scandinavian-inspired design system with console aesthetic",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/berget-ai/berget-design-system.git"
+  },
+  "type": "module",
+  "scripts": {
+    "postinstall": "keycloakify sync-extensions",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build-keycloak-theme": "npm run build && keycloakify build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build -o storybook-static",
+    "format": "prettier . --write",
+    "chromatic": "npx chromatic --project-token=chpt_f63e87a6303e316"
+  },
+  "license": "MIT",
+  "keywords": [
+    "design-system",
+    "berget",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "storybook",
+    "console-style",
+    "scandinavian-design"
+  ],
+  "dependencies": {
+    "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/ovo": "^5.2.8",
+    "@keycloakify/email-native": "~260007.0.0",
+    "@radix-ui/react-slot": "^1.2.4",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "keycloakify": "^11.13.0",
+    "lucide-react": "^0.427.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.5.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@storybook/react-vite": "^10.1.2",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.20",
+    "chromatic": "^13.3.5",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-storybook": "^10.1.2",
+    "globals": "^15.12.0",
+    "prettier": "3.3.1",
+    "storybook": "^10.1.2",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.2.2",
+    "typescript-eslint": "^8.15.0",
+    "vite": "^5.0.8"
+  },
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  }
 }
