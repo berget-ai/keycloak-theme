@@ -146,17 +146,26 @@ export const SizeComparison: Story = {
  */
 export const InNavigation: Story = {
     render: () => (
-        <div className="w-full bg-white border-b border-gray-200">
+        <div className="w-full bg-background border-b border-[hsl(var(--border))]">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                <BergetLogotype size={32} variant="dark" />
+                <BergetLogotype size={32} variant="light" />
                 <nav className="flex gap-4">
-                    <a href="#" className="text-sm text-gray-600 hover:text-gray-900">
+                    <a
+                        href="#"
+                        className="text-sm text-muted-foreground hover:text-foreground"
+                    >
                         Dashboard
                     </a>
-                    <a href="#" className="text-sm text-gray-600 hover:text-gray-900">
+                    <a
+                        href="#"
+                        className="text-sm text-muted-foreground hover:text-foreground"
+                    >
                         Models
                     </a>
-                    <a href="#" className="text-sm text-gray-600 hover:text-gray-900">
+                    <a
+                        href="#"
+                        className="text-sm text-muted-foreground hover:text-foreground"
+                    >
                         Docs
                     </a>
                 </nav>
