@@ -1,9 +1,9 @@
 import * as React from "react";
 import { cn } from "../../utils/cn";
 
-export interface LogoProps extends React.SVGAttributes<SVGSVGElement> {
+export interface BergetSymbolProps extends React.SVGAttributes<SVGSVGElement> {
     /**
-     * Size of the logo
+     * Size of the symbol
      */
     size?: number;
     /**
@@ -13,26 +13,27 @@ export interface LogoProps extends React.SVGAttributes<SVGSVGElement> {
 }
 
 /**
- * Berget Logo Component
+ * Berget Symbol Component
  *
- * Official Berget AI logo in SVG format.
+ * The Berget AI triangle symbol.
  *
  * **Variants:**
- * - `light` - White logo for dark backgrounds (default)
- * - `dark` - Black logo for light backgrounds
+ * - `light` - White symbol for dark backgrounds (default)
+ * - `dark` - Black symbol for light backgrounds
  *
  * **Use Cases:**
  * - Navigation headers
  * - Email templates
  * - Marketing materials
  * - Branding elements
+ * - Favicons
  *
  * @example
  * ```tsx
- * <Logo size={48} variant="light" />
+ * <BergetSymbol size={48} variant="light" />
  * ```
  */
-export const Logo = React.forwardRef<SVGSVGElement, LogoProps>(
+export const BergetSymbol = React.forwardRef<SVGSVGElement, BergetSymbolProps>(
     ({ size = 48, variant = "light", className, ...props }, ref) => {
         const aspectRatio = 463 / 419;
         const width = size * aspectRatio;
@@ -68,4 +69,4 @@ export const Logo = React.forwardRef<SVGSVGElement, LogoProps>(
         );
     }
 );
-Logo.displayName = "Logo";
+BergetSymbol.displayName = "BergetSymbol";
