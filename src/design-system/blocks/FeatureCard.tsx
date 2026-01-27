@@ -113,8 +113,38 @@ const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
             >
                 {Icon && (
                     <div>
-                        <Icon className={cn("w-8 h-8", iconColor)} strokeWidth={1} />
+                        <Icon
+                            className={cn("w-[28px] h-[28px]", iconColor)}
+                            strokeWidth={1}
+                        />
                     </div>
+                )}
+
+                <h3 className="text-[20px] leading-[26px] font-normal font-[\'Ovo\'] tracking-[-1px] text-white">
+                    {title}
+                </h3>
+
+                {description && (
+                    <p className="text-[14px] leading-[30px] font-normal font-[\'DM_Sans\'] text-white/80">
+                        {description}
+                    </p>
+                )}
+
+                {features && features.length > 0 && (
+                    <ul className="flex flex-col gap-3 w-full">
+                        {features.map((feature, index) => (
+                            <li key={index} className="flex items-center gap-3">
+                                {showCheckmarks && (
+                                    <div className="w-[18px] h-[18px] flex items-center justify-center flex-shrink-0">
+                                        <div className="w-[6px] h-[6px] rounded-full bg-white/60" />
+                                    </div>
+                                )}
+                                <span className="text-[12px] leading-[20px] font-normal font-[\'DM_Sans\'] text-white/80 flex-1">
+                                    {feature}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
                 )}
 
                 <h3 className="text-[30px] leading-[36px] font-normal font-['Ovo'] tracking-[-0.8px] text-white">
