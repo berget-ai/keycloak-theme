@@ -105,7 +105,7 @@ const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
                 ref={ref}
                 variant="highlight"
                 className={cn(
-                    "flex flex-col items-start gap-4 p-[30px] transition-colors group backdrop-blur-[10px]",
+                    "flex flex-col items-start gap-6 px-10 py-12 transition-colors group backdrop-blur-[10px]",
                     featureCardVariants({ variant }),
                     className
                 )}
