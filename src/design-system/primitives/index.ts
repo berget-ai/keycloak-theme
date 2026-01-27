@@ -39,3 +39,4 @@ export { BergetSymbol, type BergetSymbolProps } from "./BergetSymbol";
 export { BergetLogotype, type BergetLogotypeProps } from "./BergetLogotype";
 export { Panel, panelVariants, type PanelProps } from "./Panel";
 export { Select, selectVariants, type SelectProps, type SelectOption } from "./Select";
+export { Textarea, textareaVariants, type TextareaProps } from "./Textarea";
