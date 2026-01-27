@@ -37,12 +37,8 @@ The Card component is a flexible container for grouping related content and acti
     argTypes: {
         variant: {
             control: "select",
-            options: ["default", "glass", "elevated", "flat"],
+            options: ["highlight", "glass", "solid"],
             description: "Visual style variant of the card"
-        },
-        withBokeh: {
-            control: "boolean",
-            description: "Enable animated Bokeh background effect"
         }
     }
 } satisfies Meta<typeof Card>;
@@ -55,7 +51,7 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
     args: {
-        variant: "default",
+        variant: "highlight",
         children: (
             <>
                 <CardHeader>
@@ -79,6 +75,29 @@ export const Default: Story = {
 };
 
 /**
+ * Highlight variant with dark glass and radial gradient
+ */
+export const Highlight: Story = {
+    args: {
+        variant: "highlight",
+        children: (
+            <>
+                <CardHeader>
+                    <CardTitle>Highlight Card</CardTitle>
+                    <CardDescription>Dark glass with subtle gradient</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-sm">
+                        The highlight variant features a dark glass background with a
+                        subtle radial gradient and top highlight.
+                    </p>
+                </CardContent>
+            </>
+        )
+    }
+};
+
+/**
  * Glass morphism variant with backdrop blur
  */
 export const Glass: Story = {
@@ -90,7 +109,7 @@ export const Glass: Story = {
             className="relative min-h-[400px] w-full flex items-center justify-center p-8"
             style={{
                 background:
-                    "linear-gradient(135deg, #52B788 0%, #2D6A4F 50%, #1B4332 100%)",
+                    "linear-gradient(135deg, #1B4332 0%, #0D3B25 50%, #081F15 100%)",
                 backgroundSize: "400% 400%"
             }}
         >
@@ -99,7 +118,7 @@ export const Glass: Story = {
             <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-[#E5DDD5] opacity-40" />
             <div className="absolute top-1/2 right-20 w-24 h-24 rounded-full bg-[#52B788] opacity-50" />
 
-            <Card variant="glass" className="relative z-10 max-w-md">
+            <Card variant="glass" className="relative z-10 max-w-md items-center">
                 <CardHeader>
                     <CardTitle>Glass Card</CardTitle>
                     <CardDescription>With backdrop blur and transparency</CardDescription>
@@ -120,66 +139,21 @@ export const Glass: Story = {
 };
 
 /**
- * Elevated card with shadow and hover effect
+ * Solid variant with dark background
  */
-export const Elevated: Story = {
+export const Solid: Story = {
     args: {
-        variant: "elevated",
+        variant: "solid",
         children: (
             <>
                 <CardHeader>
-                    <CardTitle>Elevated Card</CardTitle>
-                    <CardDescription>Hover to see the lift effect</CardDescription>
+                    <CardTitle>Solid Card</CardTitle>
+                    <CardDescription>Solid dark background with gradient</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <p className="text-sm">
-                        This card lifts slightly on hover for interactive feedback.
-                    </p>
-                </CardContent>
-            </>
-        )
-    }
-};
-
-/**
- * Flat card without border
- */
-export const Flat: Story = {
-    args: {
-        variant: "flat",
-        children: (
-            <>
-                <CardHeader>
-                    <CardTitle>Flat Card</CardTitle>
-                    <CardDescription>Minimal styling</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-sm">A minimalist card without borders.</p>
-                </CardContent>
-            </>
-        )
-    }
-};
-
-/**
- * Card with Bokeh animated background effect
- */
-export const WithBokeh: Story = {
-    args: {
-        variant: "glass",
-        withBokeh: true,
-        children: (
-            <>
-                <CardHeader>
-                    <CardTitle>Bokeh Effect</CardTitle>
-                    <CardDescription>
-                        Subtle animated glow in the background
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-sm">
-                        The Bokeh effect adds gentle, floating orbs of color in the
-                        background.
+                        The solid variant features a solid dark background with a subtle
+                        radial gradient and top highlight.
                     </p>
                 </CardContent>
             </>
@@ -196,7 +170,7 @@ export const FeatureCard: Story = {
         children: (
             <>
                 <CardHeader>
-                    <div className="w-12 h-12 rounded-xl bg-[hsl(var(--secondary))]/20 flex items-center justify-center mb-4">
+                    <div className="w-12 h-12  flex items-center justify-center mb-4">
                         <Zap className="w-7 h-7 text-white" strokeWidth={2} />
                     </div>
                     <CardTitle>Lightning Fast</CardTitle>
@@ -210,26 +184,6 @@ export const FeatureCard: Story = {
             </>
         )
     }
-};
-
-/**
- * Showcase of different padding sizes
- */
-export const PaddingSizes: Story = {
-    args: {
-        children: ""
-    },
-    render: () => (
-        <div className="flex flex-col gap-4 w-80">
-            <Card>
-                <div className="p-4 bg-white/5">Default padding</div>
-            </Card>
-            <Card>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>With default padding</CardDescription>
-            </Card>
-        </div>
-    )
 };
 
 /**
@@ -257,7 +211,7 @@ export const FeatureGrid: Story = {
                     className="group hover:border-[hsl(var(--secondary))]/50"
                 >
                     <CardHeader>
-                        <div className="w-12 h-12 rounded-xl bg-[hsl(var(--secondary))]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12  flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                             <Shield className="w-7 h-7 text-white" strokeWidth={2} />
                         </div>
                         <CardTitle>Secure</CardTitle>
@@ -274,7 +228,7 @@ export const FeatureGrid: Story = {
                     className="group hover:border-[hsl(var(--secondary))]/50"
                 >
                     <CardHeader>
-                        <div className="w-12 h-12 rounded-xl bg-[hsl(var(--secondary))]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12  flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                             <Zap className="w-7 h-7 text-white" strokeWidth={2} />
                         </div>
                         <CardTitle>Fast</CardTitle>
@@ -291,7 +245,7 @@ export const FeatureGrid: Story = {
                     className="group hover:border-[hsl(var(--secondary))]/50"
                 >
                     <CardHeader>
-                        <div className="w-12 h-12 rounded-xl bg-[hsl(var(--secondary))]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12  flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                             <Database className="w-7 h-7 text-white" strokeWidth={2} />
                         </div>
                         <CardTitle>Scalable</CardTitle>
@@ -318,14 +272,14 @@ export const AllVariants: Story = {
         children: ""
     },
     render: () => (
-        <div className="grid grid-cols-2 gap-6 w-[800px]">
-            <Card variant="default">
+        <div className="flex flex-col gap-6 w-[400px]">
+            <Card variant="highlight">
                 <CardHeader>
-                    <CardTitle>Default</CardTitle>
-                    <CardDescription>Standard card styling</CardDescription>
+                    <CardTitle>Highlight</CardTitle>
+                    <CardDescription>Dark glass gradient</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <p className="text-sm">With subtle border and clean background</p>
+                    <p className="text-sm">Subtle radial gradient overlay</p>
                 </CardContent>
             </Card>
 
@@ -339,23 +293,13 @@ export const AllVariants: Story = {
                 </CardContent>
             </Card>
 
-            <Card variant="elevated">
+            <Card variant="solid">
                 <CardHeader>
-                    <CardTitle>Elevated</CardTitle>
-                    <CardDescription>Interactive hover effect</CardDescription>
+                    <CardTitle>Solid</CardTitle>
+                    <CardDescription>Solid dark background</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <p className="text-sm">Lifts on hover for feedback</p>
-                </CardContent>
-            </Card>
-
-            <Card variant="glass" withBokeh>
-                <CardHeader>
-                    <CardTitle>With Bokeh</CardTitle>
-                    <CardDescription>Animated background</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-sm">Subtle floating orbs of color</p>
+                    <p className="text-sm">Solid background with gradient accent</p>
                 </CardContent>
             </Card>
         </div>

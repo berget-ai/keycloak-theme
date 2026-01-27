@@ -40,7 +40,7 @@ export const APIKeysList: Story = {
             </div>
 
             {/* List Panel */}
-            <Panel variant="default" padding="none" radius="lg">
+            <Panel variant="highlight" padding="none" radius="lg">
                 <div className="relative z-10">
                     {/* Table Header */}
                     <ListHeader>
@@ -134,7 +134,7 @@ export const SimpleList: Story = {
         children: ""
     },
     render: () => (
-        <Panel variant="default" padding="none" radius="lg" className="w-[600px]">
+        <Panel variant="highlight" padding="none" radius="lg" className="w-[600px]">
             <div className="relative z-10">
                 <List>
                     <ListItem
@@ -183,7 +183,7 @@ export const WithHeader: Story = {
         children: ""
     },
     render: () => (
-        <Panel variant="default" padding="none" radius="lg" className="w-[800px]">
+        <Panel variant="highlight" padding="none" radius="lg" className="w-[800px]">
             <div className="relative z-10">
                 <ListHeader>
                     <div className="flex items-center gap-4 pl-14">
@@ -265,7 +265,7 @@ export const CompactList: Story = {
         children: ""
     },
     render: () => (
-        <Panel variant="default" padding="none" radius="lg" className="w-[500px]">
+        <Panel variant="highlight" padding="none" radius="lg" className="w-[500px]">
             <div className="relative z-10">
                 <List>
                     <ListItem icon={null} interactive={false}>
@@ -313,7 +313,7 @@ export const InteractiveList: Story = {
         children: ""
     },
     render: () => (
-        <Panel variant="default" padding="none" radius="lg" className="w-[600px]">
+        <Panel variant="highlight" padding="none" radius="lg" className="w-[600px]">
             <div className="relative z-10">
                 <div className="px-6 py-4 border-b border-[hsl(var(--border))]">
                     <h2 className="text-xl font-medium">Recent Activity</h2>
