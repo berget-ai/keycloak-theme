@@ -13,10 +13,10 @@ const config: StorybookConfig = {
     },
     staticDirs: ["../public"],
     // For GitHub Pages deployment
-    viteFinal: async (config) => {
+    viteFinal: async config => {
         // Set base path for GitHub Pages if GITHUB_REPOSITORY is set
         if (process.env.GITHUB_REPOSITORY) {
-            const repo = process.env.GITHUB_REPOSITORY.split('/')[1];
+            const repo = process.env.GITHUB_REPOSITORY.split("/")[1];
             config.base = `/${repo}/`;
         }
         return config;

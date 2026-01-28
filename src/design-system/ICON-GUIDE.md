@@ -25,7 +25,7 @@ npm install lucide-react
 ```
 
 ```tsx
-import { Cloud, AlertCircle, CheckCircle } from 'lucide-react'
+import { Cloud, AlertCircle, CheckCircle } from "lucide-react";
 ```
 
 ---
@@ -36,67 +36,67 @@ These are our **canonical icons** - always use these for consistency.
 
 ### Actions & Navigation
 
-| Purpose | Icon | Usage |
-|---------|------|-------|
-| Close/Dismiss | `X` | Modal close, notification dismiss |
-| Menu | `Menu` | Mobile navigation toggle |
-| Search | `Search` | Search inputs and functionality |
-| Settings | `Settings` | Configuration, preferences |
-| Add/Create | `Plus` | Create new item, add to list |
-| Edit | `Pencil` | Edit existing content |
-| Delete | `Trash2` | Delete/remove items |
-| Download | `Download` | File downloads |
-| Upload | `Upload` | File uploads |
-| Copy | `Copy` | Copy to clipboard |
-| External Link | `ExternalLink` | Opens in new tab/window |
-| Forward | `ArrowRight` | Next, continue, proceed |
-| Back | `ArrowLeft` | Previous, go back |
-| Expand | `ChevronDown` | Expand accordion/dropdown |
-| Collapse | `ChevronUp` | Collapse accordion/dropdown |
+| Purpose       | Icon           | Usage                             |
+| ------------- | -------------- | --------------------------------- |
+| Close/Dismiss | `X`            | Modal close, notification dismiss |
+| Menu          | `Menu`         | Mobile navigation toggle          |
+| Search        | `Search`       | Search inputs and functionality   |
+| Settings      | `Settings`     | Configuration, preferences        |
+| Add/Create    | `Plus`         | Create new item, add to list      |
+| Edit          | `Pencil`       | Edit existing content             |
+| Delete        | `Trash2`       | Delete/remove items               |
+| Download      | `Download`     | File downloads                    |
+| Upload        | `Upload`       | File uploads                      |
+| Copy          | `Copy`         | Copy to clipboard                 |
+| External Link | `ExternalLink` | Opens in new tab/window           |
+| Forward       | `ArrowRight`   | Next, continue, proceed           |
+| Back          | `ArrowLeft`    | Previous, go back                 |
+| Expand        | `ChevronDown`  | Expand accordion/dropdown         |
+| Collapse      | `ChevronUp`    | Collapse accordion/dropdown       |
 
 ### Status & Feedback
 
-| Purpose | Icon | Usage |
-|---------|------|-------|
-| Success | `CheckCircle` | Success messages, completed |
-| Error | `XCircle` | Error messages, failed |
-| Warning | `AlertTriangle` | Warnings, caution |
-| Info | `Info` | Informational messages |
-| Help | `HelpCircle` | Help text, tooltips |
-| Loading | `Loader2` | Loading states (with spin) |
+| Purpose | Icon            | Usage                       |
+| ------- | --------------- | --------------------------- |
+| Success | `CheckCircle`   | Success messages, completed |
+| Error   | `XCircle`       | Error messages, failed      |
+| Warning | `AlertTriangle` | Warnings, caution           |
+| Info    | `Info`          | Informational messages      |
+| Help    | `HelpCircle`    | Help text, tooltips         |
+| Loading | `Loader2`       | Loading states (with spin)  |
 
 ### Features & Services (Marketing)
 
-| Purpose | Icon | Usage |
-|---------|------|-------|
-| Cloud/Serverless | `Cloud` | Serverless features |
-| Speed/Performance | `Zap` | Fast, performance |
-| Security | `Shield` | Security, protection |
-| Database | `Database` | Data storage, databases |
-| AI/Bot | `Bot` | AI models, automation |
-| Network | `Network` | Connectivity, networking |
-| Server | `Server` | Infrastructure, compute |
-| Code | `Code` | Developer features |
-| Lock | `Lock` | Privacy, encryption |
-| Globe | `Globe` | Global, worldwide |
-| Users | `Users` | Team, collaboration |
-| Heart | `Heart` | Favorite, like |
-| Star | `Star` | Featured, premium |
-| Sparkles | `Sparkles` | New, special |
-| Leaf | `Leaf` | Sustainability, eco |
+| Purpose           | Icon       | Usage                    |
+| ----------------- | ---------- | ------------------------ |
+| Cloud/Serverless  | `Cloud`    | Serverless features      |
+| Speed/Performance | `Zap`      | Fast, performance        |
+| Security          | `Shield`   | Security, protection     |
+| Database          | `Database` | Data storage, databases  |
+| AI/Bot            | `Bot`      | AI models, automation    |
+| Network           | `Network`  | Connectivity, networking |
+| Server            | `Server`   | Infrastructure, compute  |
+| Code              | `Code`     | Developer features       |
+| Lock              | `Lock`     | Privacy, encryption      |
+| Globe             | `Globe`    | Global, worldwide        |
+| Users             | `Users`    | Team, collaboration      |
+| Heart             | `Heart`    | Favorite, like           |
+| Star              | `Star`     | Featured, premium        |
+| Sparkles          | `Sparkles` | New, special             |
+| Leaf              | `Leaf`     | Sustainability, eco      |
 
 ### Data & Content
 
-| Purpose | Icon | Usage |
-|---------|------|-------|
-| Document | `FileText` | Documents, files |
-| Image | `Image` | Images, photos |
-| Video | `Video` | Video content |
-| Calendar | `Calendar` | Dates, scheduling |
-| Clock | `Clock` | Time, duration |
-| Chart | `BarChart3` | Analytics, metrics |
-| Filter | `Filter` | Filtering data |
-| Sort | `ArrowUpDown` | Sorting lists |
+| Purpose  | Icon          | Usage              |
+| -------- | ------------- | ------------------ |
+| Document | `FileText`    | Documents, files   |
+| Image    | `Image`       | Images, photos     |
+| Video    | `Video`       | Video content      |
+| Calendar | `Calendar`    | Dates, scheduling  |
+| Clock    | `Clock`       | Time, duration     |
+| Chart    | `BarChart3`   | Analytics, metrics |
+| Filter   | `Filter`      | Filtering data     |
+| Sort     | `ArrowUpDown` | Sorting lists      |
 
 ---
 
@@ -165,10 +165,11 @@ In marketing contexts (FeatureCard, hero sections), icons can use brand colors.
 ```
 
 **Approved Brand Colors for Icons:**
-- `text-[#52B788]` - Moss green (primary)
-- `text-[#74C69D]` - Sage green (secondary)
-- `text-[#FFB700]` - Gold (accent)
-- `text-white` - White (on dark backgrounds)
+
+-   `text-[#52B788]` - Moss green (primary)
+-   `text-[#74C69D]` - Sage green (secondary)
+-   `text-[#FFB700]` - Gold (accent)
+-   `text-white` - White (on dark backgrounds)
 
 ### Rule 4: Never Use Backgrounds or Borders
 
@@ -201,14 +202,14 @@ Icons should be clean and minimal - no backgrounds, no borders.
 
 Use consistent sizes across the system:
 
-| Size | Class | Use Case |
-|------|-------|----------|
-| 12px | `w-3 h-3` | Inline with small text, badges |
-| 16px | `w-4 h-4` | Inline with body text, alerts |
-| 20px | `w-5 h-5` | Buttons, navigation |
-| 24px | `w-6 h-6` | Emphasized elements |
-| 32px | `w-8 h-8` | Feature cards, large UI |
-| 48px | `w-12 h-12` | Hero sections, marketing |
+| Size | Class       | Use Case                       |
+| ---- | ----------- | ------------------------------ |
+| 12px | `w-3 h-3`   | Inline with small text, badges |
+| 16px | `w-4 h-4`   | Inline with body text, alerts  |
+| 20px | `w-5 h-5`   | Buttons, navigation            |
+| 24px | `w-6 h-6`   | Emphasized elements            |
+| 32px | `w-8 h-8`   | Feature cards, large UI        |
+| 48px | `w-12 h-12` | Hero sections, marketing       |
 
 ### Examples
 
@@ -302,11 +303,11 @@ Icons here can use brand colors for emphasis.
 
 ```tsx
 <FeatureCard
-  icon={Cloud}
-  iconColor="text-[#52B788]"
-  title="Serverless Inference"
-  description="Deploy without infrastructure"
-  variant="moss"
+    icon={Cloud}
+    iconColor="text-[#52B788]"
+    title="Serverless Inference"
+    description="Deploy without infrastructure"
+    variant="moss"
 />
 
 // Icon is larger (w-8 h-8) and uses brand color
@@ -433,12 +434,12 @@ Clear, consistent navigation icons.
 
 Before using an icon, ask:
 
-- [ ] Does this icon serve a functional purpose?
-- [ ] Am I using the standard icon for this purpose?
-- [ ] Is the icon inheriting the correct text color?
-- [ ] Is the size appropriate for the context?
-- [ ] Have I avoided adding backgrounds or borders?
-- [ ] Is this icon consistent with other uses in the system?
+-   [ ] Does this icon serve a functional purpose?
+-   [ ] Am I using the standard icon for this purpose?
+-   [ ] Is the icon inheriting the correct text color?
+-   [ ] Is the size appropriate for the context?
+-   [ ] Have I avoided adding backgrounds or borders?
+-   [ ] Is this icon consistent with other uses in the system?
 
 ---
 
@@ -516,21 +517,36 @@ When icons need emphasis (marketing contexts only):
 ```tsx
 // Essential icons - import these most often
 import {
-  // Actions
-  X, Plus, Search, Settings, Menu,
-  
-  // Status
-  CheckCircle, XCircle, AlertTriangle, Info,
-  
-  // Navigation
-  ArrowRight, ArrowLeft, ChevronDown, ChevronUp,
-  
-  // Features (Marketing)
-  Cloud, Zap, Shield, Database, Bot, Server,
-  
-  // Loading
-  Loader2,
-} from 'lucide-react'
+    // Actions
+    X,
+    Plus,
+    Search,
+    Settings,
+    Menu,
+
+    // Status
+    CheckCircle,
+    XCircle,
+    AlertTriangle,
+    Info,
+
+    // Navigation
+    ArrowRight,
+    ArrowLeft,
+    ChevronDown,
+    ChevronUp,
+
+    // Features (Marketing)
+    Cloud,
+    Zap,
+    Shield,
+    Database,
+    Bot,
+    Server,
+
+    // Loading
+    Loader2
+} from "lucide-react";
 ```
 
 ---
@@ -538,19 +554,21 @@ import {
 ## ✅ Summary
 
 **Icons in Berget Design System should be:**
-- ✅ Monochrome (inherit text color)
-- ✅ Functional (serve a purpose)
-- ✅ Consistent (same icon = same meaning)
-- ✅ Minimal (no borders, no backgrounds)
-- ✅ Appropriately sized (use size scale)
-- ✅ Contextual (match semantic colors in alerts)
+
+-   ✅ Monochrome (inherit text color)
+-   ✅ Functional (serve a purpose)
+-   ✅ Consistent (same icon = same meaning)
+-   ✅ Minimal (no borders, no backgrounds)
+-   ✅ Appropriately sized (use size scale)
+-   ✅ Contextual (match semantic colors in alerts)
 
 **Icons should NOT be:**
-- ❌ Decorative
-- ❌ Colorful (except approved brand colors in marketing)
-- ❌ Wrapped in backgrounds
-- ❌ Inconsistently sized
-- ❌ Used just to "make it pretty"
+
+-   ❌ Decorative
+-   ❌ Colorful (except approved brand colors in marketing)
+-   ❌ Wrapped in backgrounds
+-   ❌ Inconsistently sized
+-   ❌ Used just to "make it pretty"
 
 ---
 

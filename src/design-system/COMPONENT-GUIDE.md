@@ -27,15 +27,17 @@ Panel (Base)
 Panel is the base component for all card-like surfaces. It provides consistent styling without imposing structure.
 
 **When to use Panel:**
-- ✅ You need a simple container with consistent styling
-- ✅ You want full control over the internal layout
-- ✅ You're building a custom component that needs a surface
-- ✅ Content doesn't fit the Card structure (header/content/footer)
+
+-   ✅ You need a simple container with consistent styling
+-   ✅ You want full control over the internal layout
+-   ✅ You're building a custom component that needs a surface
+-   ✅ Content doesn't fit the Card structure (header/content/footer)
 
 **When NOT to use Panel:**
-- ❌ You need structured sections (use Card instead)
-- ❌ You're displaying features with icon/title/list (use FeatureCard)
-- ❌ You just need spacing (use Stack or Container instead)
+
+-   ❌ You need structured sections (use Card instead)
+-   ❌ You're displaying features with icon/title/list (use FeatureCard)
+-   ❌ You just need spacing (use Stack or Container instead)
 
 ### Panel Examples
 
@@ -79,13 +81,13 @@ Panel is the base component for all card-like surfaces. It provides consistent s
 
 ### Panel Variants
 
-| Variant | Use Case | Visual |
-|---------|----------|--------|
-| `default` | Standard container with border | Border + Background |
-| `glass` | Overlay, modal, floating elements | Backdrop blur + Border |
-| `elevated` | Interactive cards, clickable items | Shadow + Hover lift |
-| `flat` | Subtle containers, nested panels | Background only |
-| `outline` | Lightweight containers | Border only |
+| Variant    | Use Case                           | Visual                 |
+| ---------- | ---------------------------------- | ---------------------- |
+| `default`  | Standard container with border     | Border + Background    |
+| `glass`    | Overlay, modal, floating elements  | Backdrop blur + Border |
+| `elevated` | Interactive cards, clickable items | Shadow + Hover lift    |
+| `flat`     | Subtle containers, nested panels   | Background only        |
+| `outline`  | Lightweight containers             | Border only            |
 
 ---
 
@@ -95,15 +97,17 @@ Panel is the base component for all card-like surfaces. It provides consistent s
 Card extends Panel with opinionated structure: Header, Title, Description, Content, Footer.
 
 **When to use Card:**
-- ✅ Content has a clear title and description
-- ✅ You need structured sections (header, body, footer)
-- ✅ Content follows the card pattern (common in dashboards)
-- ✅ You want semantic HTML structure
+
+-   ✅ Content has a clear title and description
+-   ✅ You need structured sections (header, body, footer)
+-   ✅ Content follows the card pattern (common in dashboards)
+-   ✅ You want semantic HTML structure
 
 **When NOT to use Card:**
-- ❌ Content doesn't have a title (use Panel)
-- ❌ You're displaying a feature list with icon (use FeatureCard)
-- ❌ Layout is too custom for the card structure (use Panel)
+
+-   ❌ Content doesn't have a title (use Panel)
+-   ❌ You're displaying a feature list with icon (use FeatureCard)
+-   ❌ Layout is too custom for the card structure (use Panel)
 
 ### Card Examples
 
@@ -170,18 +174,24 @@ Card extends Panel with opinionated structure: Header, Title, Description, Conte
 
 ```tsx
 <Card>
-  <CardHeader>        {/* Optional: Title area */}
-    <CardTitle />     {/* Main heading */}
-    <CardDescription /> {/* Supporting text */}
-  </CardHeader>
-  
-  <CardContent>       {/* Required: Main content */}
-    {/* Your content here */}
-  </CardContent>
-  
-  <CardFooter>        {/* Optional: Actions */}
-    {/* Buttons, links, metadata */}
-  </CardFooter>
+    <CardHeader>
+        {" "}
+        {/* Optional: Title area */}
+        <CardTitle /> {/* Main heading */}
+        <CardDescription /> {/* Supporting text */}
+    </CardHeader>
+
+    <CardContent>
+        {" "}
+        {/* Required: Main content */}
+        {/* Your content here */}
+    </CardContent>
+
+    <CardFooter>
+        {" "}
+        {/* Optional: Actions */}
+        {/* Buttons, links, metadata */}
+    </CardFooter>
 </Card>
 ```
 
@@ -193,15 +203,17 @@ Card extends Panel with opinionated structure: Header, Title, Description, Conte
 FeatureCard extends Panel with opinionated structure for showcasing features: Icon, Title, Description, Feature list.
 
 **When to use FeatureCard:**
-- ✅ Displaying product features on marketing pages
-- ✅ Content has: icon + title + description + bullet points
-- ✅ Part of a 3-column feature grid (common pattern)
-- ✅ Using brand color variants (moss, sage, earth)
+
+-   ✅ Displaying product features on marketing pages
+-   ✅ Content has: icon + title + description + bullet points
+-   ✅ Part of a 3-column feature grid (common pattern)
+-   ✅ Using brand color variants (moss, sage, earth)
 
 **When NOT to use FeatureCard:**
-- ❌ Dashboard or app UI (use Card or Panel)
-- ❌ No feature list needed (use Card or Panel)
-- ❌ Needs footer with actions (use Card)
+
+-   ❌ Dashboard or app UI (use Card or Panel)
+-   ❌ No feature list needed (use Card or Panel)
+-   ❌ Needs footer with actions (use Card)
 
 ### FeatureCard Examples
 
@@ -261,13 +273,13 @@ FeatureCard extends Panel with opinionated structure for showcasing features: Ic
 
 Themed variants for brand consistency:
 
-| Variant | Color | Use Case |
-|---------|-------|----------|
-| `default` | Standard | Neutral features |
-| `moss` | #52B788 | Primary features, nature/eco themes |
-| `sage` | #74C69D | Secondary features, softer emphasis |
-| `earth` | #2D6A4F | Grounded features, stability themes |
-| `stone` | Stone | Premium features, subtle elegance |
+| Variant   | Color    | Use Case                            |
+| --------- | -------- | ----------------------------------- |
+| `default` | Standard | Neutral features                    |
+| `moss`    | #52B788  | Primary features, nature/eco themes |
+| `sage`    | #74C69D  | Secondary features, softer emphasis |
+| `earth`   | #2D6A4F  | Grounded features, stability themes |
+| `stone`   | Stone    | Premium features, subtle elegance   |
 
 ---
 
@@ -338,39 +350,39 @@ Need a surface/container?
 
 ```tsx
 function Dashboard() {
-  return (
-    <Container>
-      <h1>Dashboard</h1>
-      
-      {/* Metrics - Use Panel for custom layout */}
-      <div className="grid grid-cols-3 gap-4">
-        <Panel variant="elevated" padding="lg">
-          <div className="flex justify-between items-center">
-            <div>
-              <p className="text-sm text-muted">API Calls</p>
-              <p className="text-3xl font-medium">1.2M</p>
+    return (
+        <Container>
+            <h1>Dashboard</h1>
+
+            {/* Metrics - Use Panel for custom layout */}
+            <div className="grid grid-cols-3 gap-4">
+                <Panel variant="elevated" padding="lg">
+                    <div className="flex justify-between items-center">
+                        <div>
+                            <p className="text-sm text-muted">API Calls</p>
+                            <p className="text-3xl font-medium">1.2M</p>
+                        </div>
+                        <span className="text-3xl">📊</span>
+                    </div>
+                </Panel>
+                {/* More metric panels... */}
             </div>
-            <span className="text-3xl">📊</span>
-          </div>
-        </Panel>
-        {/* More metric panels... */}
-      </div>
-      
-      {/* Activity - Use Card for structured content */}
-      <Card variant="default">
-        <CardHeader>
-          <CardTitle>Recent Activity</CardTitle>
-          <CardDescription>Your latest deployments</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <ActivityList />
-        </CardContent>
-        <CardFooter>
-          <Button variant="outline">View All</Button>
-        </CardFooter>
-      </Card>
-    </Container>
-  )
+
+            {/* Activity - Use Card for structured content */}
+            <Card variant="default">
+                <CardHeader>
+                    <CardTitle>Recent Activity</CardTitle>
+                    <CardDescription>Your latest deployments</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <ActivityList />
+                </CardContent>
+                <CardFooter>
+                    <Button variant="outline">View All</Button>
+                </CardFooter>
+            </Card>
+        </Container>
+    );
 }
 ```
 
@@ -378,45 +390,45 @@ function Dashboard() {
 
 ```tsx
 function ProductsPage() {
-  return (
-    <>
-      <HeroBlock title="Our Products" />
-      
-      {/* Features - Use FeatureCard for marketing */}
-      <section className="py-24">
-        <Container>
-          <SectionHeader 
-            title="Key Features"
-            description="Everything you need to deploy AI"
-          />
-          
-          <div className="grid grid-cols-3 gap-8 mt-16">
-            <FeatureCard
-              icon={Cloud}
-              title="Serverless"
-              description="No infrastructure management"
-              features={["Auto-scaling", "Pay per use", "EU regions"]}
-              variant="moss"
-            />
-            <FeatureCard
-              icon={Zap}
-              title="Fast"
-              description="Sub-100ms response times"
-              features={["Edge locations", "CDN", "Optimized"]}
-              variant="sage"
-            />
-            <FeatureCard
-              icon={Shield}
-              title="Secure"
-              description="GDPR compliant infrastructure"
-              features={["EU data", "Encrypted", "Audited"]}
-              variant="earth"
-            />
-          </div>
-        </Container>
-      </section>
-    </>
-  )
+    return (
+        <>
+            <HeroBlock title="Our Products" />
+
+            {/* Features - Use FeatureCard for marketing */}
+            <section className="py-24">
+                <Container>
+                    <SectionHeader
+                        title="Key Features"
+                        description="Everything you need to deploy AI"
+                    />
+
+                    <div className="grid grid-cols-3 gap-8 mt-16">
+                        <FeatureCard
+                            icon={Cloud}
+                            title="Serverless"
+                            description="No infrastructure management"
+                            features={["Auto-scaling", "Pay per use", "EU regions"]}
+                            variant="moss"
+                        />
+                        <FeatureCard
+                            icon={Zap}
+                            title="Fast"
+                            description="Sub-100ms response times"
+                            features={["Edge locations", "CDN", "Optimized"]}
+                            variant="sage"
+                        />
+                        <FeatureCard
+                            icon={Shield}
+                            title="Secure"
+                            description="GDPR compliant infrastructure"
+                            features={["EU data", "Encrypted", "Audited"]}
+                            variant="earth"
+                        />
+                    </div>
+                </Container>
+            </section>
+        </>
+    );
 }
 ```
 
@@ -424,44 +436,42 @@ function ProductsPage() {
 
 ```tsx
 function SettingsPage() {
-  return (
-    <Container>
-      <h1>Settings</h1>
-      
-      {/* Settings sections - Use Card */}
-      <Stack spacing="lg">
-        <Card>
-          <CardHeader>
-            <CardTitle>API Configuration</CardTitle>
-            <CardDescription>
-              Configure your API endpoint and authentication
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form className="space-y-4">
-              <Input label="API Key" type="password" />
-              <Input label="Endpoint URL" />
-            </form>
-          </CardContent>
-          <CardFooter>
-            <Button>Save Changes</Button>
-          </CardFooter>
-        </Card>
-        
-        <Card>
-          <CardHeader>
-            <CardTitle>Notifications</CardTitle>
-            <CardDescription>
-              Choose how you want to be notified
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            {/* Notification settings */}
-          </CardContent>
-        </Card>
-      </Stack>
-    </Container>
-  )
+    return (
+        <Container>
+            <h1>Settings</h1>
+
+            {/* Settings sections - Use Card */}
+            <Stack spacing="lg">
+                <Card>
+                    <CardHeader>
+                        <CardTitle>API Configuration</CardTitle>
+                        <CardDescription>
+                            Configure your API endpoint and authentication
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <form className="space-y-4">
+                            <Input label="API Key" type="password" />
+                            <Input label="Endpoint URL" />
+                        </form>
+                    </CardContent>
+                    <CardFooter>
+                        <Button>Save Changes</Button>
+                    </CardFooter>
+                </Card>
+
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Notifications</CardTitle>
+                        <CardDescription>
+                            Choose how you want to be notified
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent>{/* Notification settings */}</CardContent>
+                </Card>
+            </Stack>
+        </Container>
+    );
 }
 ```
 
@@ -553,15 +563,15 @@ function SettingsPage() {
 ```tsx
 // FeatureCard in a Card for complex layouts
 <Card variant="elevated">
-  <CardHeader>
-    <CardTitle>Product Features</CardTitle>
-  </CardHeader>
-  <CardContent>
-    <div className="grid grid-cols-2 gap-4">
-      <FeatureCard icon={Cloud} title="Feature 1" variant="moss" />
-      <FeatureCard icon={Zap} title="Feature 2" variant="sage" />
-    </div>
-  </CardContent>
+    <CardHeader>
+        <CardTitle>Product Features</CardTitle>
+    </CardHeader>
+    <CardContent>
+        <div className="grid grid-cols-2 gap-4">
+            <FeatureCard icon={Cloud} title="Feature 1" variant="moss" />
+            <FeatureCard icon={Zap} title="Feature 2" variant="sage" />
+        </div>
+    </CardContent>
 </Card>
 ```
 
@@ -570,10 +580,10 @@ function SettingsPage() {
 ```tsx
 // Building something unique? Use Panel
 <Panel variant="glass" padding="lg">
-  <div className="relative">
-    <BackgroundEffect />
-    <CustomLayout />
-  </div>
+    <div className="relative">
+        <BackgroundEffect />
+        <CustomLayout />
+    </div>
 </Panel>
 ```
 
@@ -581,14 +591,14 @@ function SettingsPage() {
 
 ## ✅ Quick Reference
 
-| Need... | Use | Example |
-|---------|-----|---------|
-| Simple container | `Panel` | Notification, widget |
-| Structured sections | `Card` | Dashboard card, settings |
-| Marketing feature | `FeatureCard` | Product features grid |
-| Custom layout | `Panel` | Image container, custom UI |
-| Title + content + actions | `Card` | Modal, form panel |
-| Icon + title + bullets | `FeatureCard` | Benefits section |
+| Need...                   | Use           | Example                    |
+| ------------------------- | ------------- | -------------------------- |
+| Simple container          | `Panel`       | Notification, widget       |
+| Structured sections       | `Card`        | Dashboard card, settings   |
+| Marketing feature         | `FeatureCard` | Product features grid      |
+| Custom layout             | `Panel`       | Image container, custom UI |
+| Title + content + actions | `Card`        | Modal, form panel          |
+| Icon + title + bullets    | `FeatureCard` | Benefits section           |
 
 ---
 
