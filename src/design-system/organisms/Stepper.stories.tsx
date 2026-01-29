@@ -362,6 +362,9 @@ const sampleSteps: Step[] = [
  * Interactive Stepper with Navigation
  */
 export const Interactive: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     args: {
         steps: sampleSteps,
         currentStep: 0
@@ -395,6 +398,9 @@ export const WithoutNumbers: Story = {
  * Registration Flow Example
  */
 export const RegistrationFlow: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     args: {
         steps: [],
         currentStep: 0
@@ -406,6 +412,9 @@ export const RegistrationFlow: Story = {
  * Checkout Flow Example
  */
 export const CheckoutFlow: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     args: {
         steps: [],
         currentStep: 0

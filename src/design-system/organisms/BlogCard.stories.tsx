@@ -162,6 +162,9 @@ export const WithoutCategory: Story = {
  * 3-Column Grid
  */
 export const ThreeColumnGrid: StoryObj<typeof BlogGrid> = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => <BlogGrid posts={samplePosts} columns={3} />
 };
 
@@ -169,6 +172,9 @@ export const ThreeColumnGrid: StoryObj<typeof BlogGrid> = {
  * 2-Column Grid
  */
 export const TwoColumnGrid: StoryObj<typeof BlogGrid> = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => <BlogGrid posts={samplePosts} columns={2} />
 };
 
@@ -176,6 +182,9 @@ export const TwoColumnGrid: StoryObj<typeof BlogGrid> = {
  * Grid with Featured Post
  */
 export const GridWithFeatured: StoryObj<typeof BlogGrid> = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => <BlogGrid posts={samplePosts} columns={3} featuredId="1" />
 };
 
@@ -183,6 +192,9 @@ export const GridWithFeatured: StoryObj<typeof BlogGrid> = {
  * Complete Blog Page Example
  */
 export const BlogPageExample: StoryObj<typeof BlogGrid> = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="min-h-screen bg-[hsl(var(--background))] py-16 px-4">
             <div className="max-w-7xl mx-auto">
