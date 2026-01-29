@@ -182,6 +182,7 @@ export const ProductsPageHeader: Story = {
         </div>
     ),
     parameters: {
+        controls: { hide: true },
         layout: "fullscreen"
     }
 };
@@ -205,6 +206,7 @@ export const WhyBergetPattern: Story = {
         </div>
     ),
     parameters: {
+        controls: { hide: true },
         layout: "fullscreen"
     }
 };
@@ -249,6 +251,7 @@ export const FeaturesSectionPattern: Story = {
         </div>
     ),
     parameters: {
+        controls: { hide: true },
         layout: "fullscreen"
     }
 };
@@ -272,6 +275,7 @@ export const CTASectionPattern: Story = {
         </div>
     ),
     parameters: {
+        controls: { hide: true },
         layout: "fullscreen"
     }
 };

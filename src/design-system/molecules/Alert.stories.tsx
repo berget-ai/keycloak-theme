@@ -57,6 +57,12 @@ type Story = StoryObj<typeof meta>;
  * Default neutral alert
  */
 export const Default: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Alert className="w-[400px]">
             <AlertTitle>Heads up!</AlertTitle>
@@ -71,6 +77,12 @@ export const Default: Story = {
  * Info alert for informational messages
  */
 export const Info: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Alert variant="info" className="w-[400px]">
             <AlertTitle>Information</AlertTitle>
@@ -85,6 +97,12 @@ export const Info: Story = {
  * Success alert for positive confirmations
  */
 export const Success: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Alert variant="success" className="w-[400px]">
             <AlertTitle>Success!</AlertTitle>
@@ -99,6 +117,12 @@ export const Success: Story = {
  * Warning alert for important cautions
  */
 export const Warning: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Alert variant="warning" className="w-[400px]">
             <AlertTitle>Warning</AlertTitle>
@@ -113,6 +137,12 @@ export const Warning: Story = {
  * Destructive alert for errors and critical issues
  */
 export const Destructive: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Alert variant="destructive" className="w-[400px]">
             <AlertTitle>Error</AlertTitle>
@@ -128,6 +158,12 @@ export const Destructive: Story = {
  * Title Only - Alert with just a title
  */
 export const TitleOnly: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Alert variant="info" className="w-[400px]">
             <AlertTitle>Maintenance scheduled for January 25, 2026</AlertTitle>
@@ -139,6 +175,12 @@ export const TitleOnly: Story = {
  * Description Only - Alert with just description
  */
 export const DescriptionOnly: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Alert variant="warning" className="w-[400px]">
             <AlertDescription>
@@ -154,6 +196,12 @@ export const DescriptionOnly: Story = {
  * Common use case: showing validation errors in forms
  */
 export const FormValidation: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="space-y-4 w-[400px]">
             <Alert variant="destructive">
@@ -175,6 +223,12 @@ export const FormValidation: Story = {
  * Common use case: showing system-wide status messages
  */
 export const SystemStatus: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="space-y-4 w-[500px]">
             <Alert variant="success">
@@ -208,6 +262,12 @@ export const SystemStatus: Story = {
  * Common use case: AI/ML deployment status updates
  */
 export const DeploymentNotifications: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="space-y-4 w-[500px]">
             <Alert variant="info">
@@ -244,6 +304,12 @@ export const DeploymentNotifications: Story = {
  * Common use case: highlighting new features or updates
  */
 export const FeatureAnnouncements: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Alert variant="info" className="w-[500px]">
             <AlertTitle>New Feature Available</AlertTitle>
@@ -260,6 +326,12 @@ export const FeatureAnnouncements: Story = {
  * Shows all alert variants side by side
  */
 export const AllVariants: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="space-y-4 w-[500px]">
             <Alert variant="default">

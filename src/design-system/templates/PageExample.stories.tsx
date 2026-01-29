@@ -32,6 +32,12 @@ type Story = StoryObj<typeof meta>;
  * Complete Products Page Pattern
  */
 export const ProductsPageExample: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <main className="min-h-screen">
             {/* Hero */}
@@ -127,6 +133,12 @@ export const ProductsPageExample: Story = {
  * Why Berget Page Pattern
  */
 export const WhyBergetPageExample: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <main className="min-h-screen">
             {/* Hero */}
@@ -226,6 +238,12 @@ export const WhyBergetPageExample: Story = {
  * Simple Landing Page
  */
 export const SimpleLandingPage: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <main className="min-h-screen">
             {/* Hero */}

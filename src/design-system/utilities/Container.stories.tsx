@@ -83,6 +83,12 @@ const DemoContent = () => (
  * Small container (768px) - Perfect for articles and reading-focused content
  */
 export const Small: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="min-h-screen bg-background py-12">
             <Container size="sm">
@@ -96,6 +102,12 @@ export const Small: Story = {
  * Medium container (1024px) - Good for standard content pages
  */
 export const Medium: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="min-h-screen bg-background py-12">
             <Container size="md">
@@ -109,6 +121,12 @@ export const Medium: Story = {
  * Large container (1280px) - Default size for most pages
  */
 export const Large: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="min-h-screen bg-background py-12">
             <Container size="lg">
@@ -122,6 +140,12 @@ export const Large: Story = {
  * Extra Large container (1400px) - For wide layouts and dashboards
  */
 export const ExtraLarge: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="min-h-screen bg-background py-12">
             <Container size="xl">
@@ -135,6 +159,12 @@ export const ExtraLarge: Story = {
  * Full width - For edge-to-edge layouts
  */
 export const FullWidth: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="min-h-screen bg-background py-12">
             <Container size="full">
@@ -148,6 +178,12 @@ export const FullWidth: Story = {
  * Comparison - Shows all sizes side by side
  */
 export const AllSizes: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="min-h-screen bg-background py-12 space-y-8">
             <Container size="sm">
@@ -199,6 +235,12 @@ export const AllSizes: Story = {
  * Article Layout - Typical blog post or documentation page
  */
 export const ArticleLayout: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="min-h-screen bg-background py-12">
             <Container size="sm">
@@ -247,6 +289,12 @@ export const ArticleLayout: Story = {
  * Dashboard Layout - Wide layout for data-heavy interfaces
  */
 export const DashboardLayout: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <div className="min-h-screen bg-background py-8">
             <Container size="xl">

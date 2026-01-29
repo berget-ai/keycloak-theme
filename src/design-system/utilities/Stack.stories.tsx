@@ -79,6 +79,12 @@ const DemoBox = ({
  * Vertical Stack (Default) - Items stacked vertically
  */
 export const Vertical: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Stack>
             <DemoBox>Item 1</DemoBox>
@@ -92,6 +98,12 @@ export const Vertical: Story = {
  * Horizontal Stack - Items arranged horizontally
  */
 export const Horizontal: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Stack direction="horizontal">
             <DemoBox>Item 1</DemoBox>
@@ -105,6 +117,12 @@ export const Horizontal: Story = {
  * Spacing Variants - Different gap sizes
  */
 export const SpacingVariants: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Stack spacing="lg">
             <div>
@@ -170,6 +188,12 @@ export const SpacingVariants: Story = {
  * Alignment Options - Different item alignments
  */
 export const AlignmentOptions: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Stack spacing="lg">
             <div>
@@ -231,6 +255,12 @@ export const AlignmentOptions: Story = {
  * Justify Options - Different justification alignments
  */
 export const JustifyOptions: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Stack spacing="lg">
             <div>
@@ -318,6 +348,12 @@ export const JustifyOptions: Story = {
  * Button Group - Common use case for horizontal stacks
  */
 export const ButtonGroup: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Stack direction="horizontal" spacing="sm">
             <Button variant="default">Save</Button>
@@ -331,6 +367,12 @@ export const ButtonGroup: Story = {
  * Form Layout - Common use case for vertical stacks
  */
 export const FormLayout: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Stack spacing="lg" className="w-[350px]">
             <div>
@@ -366,6 +408,12 @@ export const FormLayout: Story = {
  * Card Content - Using stack inside cards
  */
 export const CardContent: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Card className="w-[350px] p-6">
             <Stack spacing="lg">
@@ -410,6 +458,12 @@ export const CardContent: Story = {
  * Navigation - Horizontal navigation items
  */
 export const Navigation: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Stack direction="horizontal" spacing="sm" align="center">
             <Button variant="ghost">Dashboard</Button>
@@ -426,6 +480,12 @@ export const Navigation: Story = {
  * Nested Stacks - Creating 2D layouts
  */
 export const NestedStacks: Story = {
+    parameters: {
+
+        controls: { hide: true }
+
+    },
+
     render: () => (
         <Stack spacing="lg" className="w-[600px]">
             <Stack direction="horizontal" justify="between" align="center">
