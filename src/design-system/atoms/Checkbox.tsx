@@ -89,12 +89,12 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                         ) : (
                             <Check
                                 className={cn(
-                                    "opacity-0 peer-checked:opacity-100 transition-opacity",
+                                    "opacity-100", // Synlig hela tiden för debugging
                                     size === "sm" && "w-3 h-3",
                                     size === "default" && "w-3.5 h-3.5",
                                     size === "lg" && "w-4 h-4",
-                                    "peer-checked:text-white",
-                                    "bg-red-500" // Debug: röd bakgrund för att se om ikonen finns
+                                    "text-white", // Vit text
+                                    "bg-red-500" // Debug: röd bakgrund
                                 )}
                                 strokeWidth={2}
                             />
