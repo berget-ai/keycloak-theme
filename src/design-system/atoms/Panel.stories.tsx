@@ -84,11 +84,12 @@ export const Interactive: Story = {
 };
 
 /**
- * All variants showcase
+ * All variants showcase - shows all variants at once
+ * Note: This is a static showcase. Use Interactive story to test individual variants with controls.
  */
 export const AllVariants: Story = {
     args: {
-        children: ""
+        children: undefined as any
     },
     render: () => (
         <div className="flex flex-col gap-4 w-[600px]">
@@ -116,11 +117,12 @@ export const AllVariants: Story = {
 };
 
 /**
- * Padding options
+ * Padding options - shows all padding options at once
+ * Note: This is a static showcase. Use Interactive story to test individual padding with controls.
  */
 export const PaddingOptions: Story = {
     args: {
-        children: ""
+        children: undefined as any
     },
     render: () => (
         <div className="flex flex-col gap-4 w-[600px]">
@@ -142,10 +144,11 @@ export const PaddingOptions: Story = {
 
 /**
  * Border radius variants - Console style with larger corners
+ * Note: This is a static showcase. Use Interactive story to test individual radius with controls.
  */
 export const RadiusVariants: Story = {
     args: {
-        children: ""
+        children: undefined as any
     },
     render: () => (
         <div className="flex flex-col gap-6 w-[600px]">
