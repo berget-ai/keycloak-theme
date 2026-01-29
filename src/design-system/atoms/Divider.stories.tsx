@@ -60,6 +60,9 @@ export const Interactive: Story = {
  * Alla varianter av Divider-komponenten.
  */
 export const AllVariants: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="space-y-8">
             <div>
@@ -95,6 +98,9 @@ export const AllVariants: Story = {
  * Alla storlekar av Divider-komponenten.
  */
 export const AllSizes: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="space-y-8">
             <div>
@@ -120,6 +126,9 @@ export const AllSizes: Story = {
  * Horisontell och vertikal orientering.
  */
 export const Orientations: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="space-y-8">
             <div>
@@ -144,6 +153,9 @@ export const Orientations: Story = {
  * Divider med etiketter.
  */
 export const WithLabels: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="space-y-8">
             <div>
@@ -174,6 +186,9 @@ export const WithLabels: Story = {
  * Divider i kontext - användning i kort och listor.
  */
 export const InContext: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="space-y-8">
             <div className="bg-white/5 rounded-xl p-6">
@@ -198,6 +213,9 @@ export const InContext: Story = {
  * Divider i navigationsmenyer.
  */
 export const InNavigation: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="bg-white/5 rounded-xl p-4 w-64">
             <nav className="space-y-1">
@@ -242,6 +260,9 @@ export const InNavigation: Story = {
  * Divider i sidfot.
  */
 export const InFooter: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="bg-white/5 rounded-xl p-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -273,6 +294,9 @@ export const InFooter: Story = {
  * Divider med olika varianter i samma layout.
  */
 export const MixedVariants: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="space-y-8">
             <div className="bg-white/5 rounded-xl p-6">

@@ -24,6 +24,9 @@ export const APIKeysList: Story = {
     args: {
         children: ""
     },
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="w-[1200px]">
             {/* Header Section */}
@@ -127,6 +130,9 @@ export const SimpleList: Story = {
     args: {
         children: ""
     },
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <Panel variant="highlight" padding="none" radius="lg" className="w-[600px]">
             <div className="relative z-10">
@@ -171,6 +177,9 @@ export const SimpleList: Story = {
 export const WithHeader: Story = {
     args: {
         children: ""
+    },
+    parameters: {
+        controls: { hide: true }
     },
     render: () => (
         <Panel variant="highlight" padding="none" radius="lg" className="w-[800px]">
@@ -248,6 +257,9 @@ export const CompactList: Story = {
     args: {
         children: ""
     },
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <Panel variant="highlight" padding="none" radius="lg" className="w-[500px]">
             <div className="relative z-10">
@@ -295,6 +307,9 @@ export const CompactList: Story = {
 export const InteractiveList: Story = {
     args: {
         children: ""
+    },
+    parameters: {
+        controls: { hide: true }
     },
     render: () => (
         <Panel variant="highlight" padding="none" radius="lg" className="w-[600px]">

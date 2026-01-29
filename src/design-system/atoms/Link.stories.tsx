@@ -32,6 +32,9 @@ export const AllVariants: Story = {
     args: {
         children: ""
     },
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="flex flex-col gap-6 w-[600px]">
             <div>
@@ -85,6 +88,9 @@ export const WithIcons: Story = {
     args: {
         children: ""
     },
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="flex flex-col gap-4 w-[600px]">
             <Link href="/next" icon={<ArrowRight className="w-4 h-4" />}>
@@ -112,6 +118,9 @@ export const WithIcons: Story = {
 export const ExternalLinks: Story = {
     args: {
         children: ""
+    },
+    parameters: {
+        controls: { hide: true }
     },
     render: () => (
         <div className="flex flex-col gap-4 w-[600px]">
@@ -144,6 +153,9 @@ export const ExternalLinks: Story = {
 export const InContext: Story = {
     args: {
         children: ""
+    },
+    parameters: {
+        controls: { hide: true }
     },
     render: () => (
         <div className="w-[800px] p-8 rounded-2xl bg-[rgba(26,26,26,0.4)] border border-[rgba(26,26,26,0.4)] backdrop-blur-[5px]">
@@ -187,6 +199,9 @@ export const Navigation: Story = {
     args: {
         children: ""
     },
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="w-[800px] p-6 rounded-2xl bg-[rgba(26,26,26,0.4)] border border-[rgba(26,26,26,0.4)] backdrop-blur-[5px]">
             <nav className="flex items-center justify-between">
@@ -221,6 +236,9 @@ export const Breadcrumb: Story = {
     args: {
         children: ""
     },
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="w-[800px] p-6 rounded-2xl bg-[rgba(26,26,26,0.4)] border border-[rgba(26,26,26,0.4)] backdrop-blur-[5px]">
             <nav className="flex items-center gap-2 text-sm">
@@ -248,6 +266,9 @@ export const Breadcrumb: Story = {
 export const FooterLinks: Story = {
     args: {
         children: ""
+    },
+    parameters: {
+        controls: { hide: true }
     },
     render: () => (
         <div className="w-[800px] p-8 rounded-2xl bg-[rgba(26,26,26,0.4)] border border-[rgba(26,26,26,0.4)] backdrop-blur-[5px]">
@@ -332,6 +353,9 @@ export const Disabled: Story = {
     args: {
         children: ""
     },
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="flex flex-col gap-4 w-[600px]">
             <Link href="#" disabled>
@@ -353,6 +377,9 @@ export const Disabled: Story = {
 export const CodeLinks: Story = {
     args: {
         children: ""
+    },
+    parameters: {
+        controls: { hide: true }
     },
     render: () => (
         <div className="w-[800px] p-6 rounded-2xl bg-[rgba(26,26,26,0.4)] border border-[rgba(26,26,26,0.4)] backdrop-blur-[5px]">

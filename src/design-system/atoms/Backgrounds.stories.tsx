@@ -42,6 +42,9 @@ export default meta;
  * Pure deep black (#0A0A0A) without any patterns or effects.
  */
 export const SolidDark: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="min-h-screen bg-[hsl(var(--background))] flex items-center justify-center">
             <div className="text-center max-w-2xl px-6">
@@ -73,6 +76,9 @@ export const SolidDark: StoryObj = {
  * Perfect for technical interfaces and dashboards.
  */
 export const GridDefault: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <GridBackground className="bg-[hsl(var(--background))] flex items-center justify-center">
             <div className="text-center max-w-2xl px-6">
@@ -103,6 +109,9 @@ export const GridDefault: StoryObj = {
  * More pronounced grid for when you want structure to be obvious.
  */
 export const GridVisible: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <GridBackground
             opacity={0.05}
@@ -125,6 +134,9 @@ export const GridVisible: StoryObj = {
  * Larger grid size (48px) for more breathing room.
  */
 export const GridLarge: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <GridBackground
             gridSize={48}
@@ -148,6 +160,9 @@ export const GridLarge: StoryObj = {
  * Perfect for hero sections and marketing pages.
  */
 export const GradientBerget: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <GradientBackground variant="berget" className="flex items-center justify-center">
             <div className="text-center max-w-2xl px-6">
@@ -170,6 +185,9 @@ export const GradientBerget: StoryObj = {
  * Warm earth tones for cozy, trustworthy feeling.
  */
 export const GradientWarm: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <GradientBackground variant="warm" className="flex items-center justify-center">
             <div className="text-center max-w-2xl px-6">
@@ -189,6 +207,9 @@ export const GradientWarm: StoryObj = {
  * Cool blue-green tones for professional, tech feel.
  */
 export const GradientCool: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <GradientBackground variant="cool" className="flex items-center justify-center">
             <div className="text-center max-w-2xl px-6">
@@ -208,6 +229,9 @@ export const GradientCool: StoryObj = {
  * Very subtle dark gradient for sections that need gentle separation.
  */
 export const GradientSubtle: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <GradientBackground variant="subtle" className="flex items-center justify-center">
             <div className="text-center max-w-2xl px-6">
@@ -228,6 +252,9 @@ export const GradientSubtle: StoryObj = {
  * Creates tech/enterprise aesthetic. CPU-intensive animation.
  */
 export const NetworkAnimated: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="relative min-h-screen bg-background flex items-center justify-center">
             <NetworkBackground opacity={0.4} nodeCount={50} />
@@ -253,6 +280,9 @@ export const NetworkAnimated: StoryObj = {
  * Creates organic, textured background perfect for creative sections.
  */
 export const GrainyGradient: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <GrainyGradientBackground className="min-h-screen flex items-center justify-center">
             <div className="text-center max-w-2xl px-6">
@@ -277,6 +307,9 @@ export const GrainyGradient: StoryObj = {
  * Creates a subtle, structured grid effect.
  */
 export const Pattern: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <PatternBackground className="min-h-screen flex items-center justify-center">
             <div className="text-center max-w-2xl px-6">
@@ -300,6 +333,9 @@ export const Pattern: StoryObj = {
  * Smaller tiles for denser pattern.
  */
 export const PatternCompact: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <PatternBackground
             tileSize={32}
@@ -326,6 +362,9 @@ export const PatternCompact: StoryObj = {
  * Combines gradient with animated network for maximum impact.
  */
 export const CombinedHero: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <GradientBackground variant="berget" className="flex items-center justify-center">
             <NetworkBackground opacity={0.3} nodeCount={40} />
@@ -359,6 +398,9 @@ export const CombinedHero: StoryObj = {
  * Side-by-side view of all background types.
  */
 export const AllBackgrounds: StoryObj = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="grid grid-cols-2 gap-px bg-white/10">
             {/* Solid Dark */}

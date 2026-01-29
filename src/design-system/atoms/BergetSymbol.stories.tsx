@@ -102,6 +102,9 @@ export const ExtraLarge: Story = {
  * Size Comparison - All sizes side by side
  */
 export const SizeComparison: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="flex items-end gap-8">
             <div className="text-center">
@@ -132,6 +135,9 @@ export const SizeComparison: Story = {
  * In Navigation Header
  */
 export const InNavigation: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="w-full bg-background border-b border-[hsl(var(--border))]">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -165,6 +171,9 @@ export const InNavigation: Story = {
  * Variant Comparison - Light vs Dark
  */
 export const VariantComparison: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     render: () => (
         <div className="grid grid-cols-2 gap-8">
             <div className="bg-background p-8 rounded-lg border border-[hsl(var(--border))]">
