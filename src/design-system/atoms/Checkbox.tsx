@@ -79,7 +79,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                         htmlFor={checkboxId}
                         className={cn(
                             checkboxVariants({ variant, size }),
-                            isChecked && "bg-primary border-primary",
+                            isChecked && "border-primary",
                             error && "border-red-500/50 bg-red-500/10",
                             "cursor-pointer",
                             disabled && "cursor-not-allowed pointer-events-none",
