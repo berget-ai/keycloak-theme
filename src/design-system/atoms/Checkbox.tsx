@@ -51,12 +51,14 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             checkedIcon,
             id,
             disabled,
+            defaultChecked,
             ...props
         },
         ref
     ) => {
         const checkboxId = id || React.useId();
         const errorId = `${checkboxId}-error`;
+        const [isChecked, setIsChecked] = React.useState(defaultChecked || false);
 
         return (
             <div className="flex items-start gap-3">
@@ -69,13 +71,15 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                         aria-invalid={!!error}
                         aria-describedby={error ? errorId : undefined}
                         className="peer sr-only"
+                        checked={isChecked}
+                        onChange={e => setIsChecked(e.target.checked)}
                         {...props}
                     />
                     <label
                         htmlFor={checkboxId}
                         className={cn(
                             checkboxVariants({ variant, size }),
-                            "peer-checked:bg-primary peer-checked:border-primary",
+                            isChecked && "bg-primary border-primary",
                             error && "border-red-500/50 bg-red-500/10",
                             "cursor-pointer",
                             disabled && "cursor-not-allowed pointer-events-none",
@@ -83,17 +87,23 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                         )}
                     >
                         {checkedIcon ? (
-                            <span className="opacity-0 peer-checked:opacity-100 transition-opacity">
+                            <span
+                                className={cn(
+                                    "transition-opacity",
+                                    isChecked ? "opacity-100" : "opacity-0"
+                                )}
+                            >
                                 {checkedIcon}
                             </span>
                         ) : (
                             <Check
                                 className={cn(
-                                    "opacity-100", // Synlig hela tiden för debugging
+                                    "transition-opacity",
+                                    isChecked ? "opacity-100" : "opacity-0",
                                     size === "sm" && "w-3 h-3",
                                     size === "default" && "w-3.5 h-3.5",
                                     size === "lg" && "w-4 h-4",
-                                    "text-white", // Vit text
+                                    "text-white",
                                     "bg-red-500" // Debug: röd bakgrund
                                 )}
                                 strokeWidth={2}
