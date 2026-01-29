@@ -135,6 +135,7 @@ export const Glass: Story = {
         </div>
     ),
     parameters: {
+        controls: { hide: true },
         layout: "fullscreen"
     }
 };
@@ -262,6 +263,7 @@ export const FeatureGrid: Story = {
         </div>
     ),
     parameters: {
+        controls: { hide: true },
         layout: "fullscreen"
     }
 };
@@ -271,6 +273,9 @@ export const FeatureGrid: Story = {
  * Note: This is a static showcase. Use Default story to test individual variants with controls.
  */
 export const AllVariants: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     args: {
         children: undefined as any
     },

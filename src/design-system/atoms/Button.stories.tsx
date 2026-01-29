@@ -82,6 +82,9 @@ export const Interactive: Story = {
  * Note: This is a static showcase. Use Interactive story to test individual variants with controls.
  */
 export const AllVariants: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     args: {
         children: undefined as any
     },
@@ -130,6 +133,9 @@ export const AllVariants: Story = {
  * Note: This is a static showcase. Use Interactive story to test individual variants with controls.
  */
 export const WithIcons: Story = {
+    parameters: {
+        controls: { hide: true }
+    },
     args: {
         children: undefined as any
     },
