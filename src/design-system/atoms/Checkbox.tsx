@@ -74,7 +74,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                     <div
                         className={cn(
                             checkboxVariants({ variant, size }),
-                            "peer-checked:bg-primary peer-checked:border-primary peer-checked:text-white",
+                            "peer-checked:bg-primary peer-checked:border-primary",
                             error && "border-red-500/50 bg-red-500/10",
                             "cursor-pointer",
                             disabled && "cursor-not-allowed",
@@ -87,7 +87,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                                 size === "sm" && "w-3 h-3",
                                 size === "default" && "w-3.5 h-3.5",
                                 size === "lg" && "w-4 h-4",
-                                "text-white"
+                                "peer-checked:text-white"
                             )}
                             strokeWidth={2}
                         />
