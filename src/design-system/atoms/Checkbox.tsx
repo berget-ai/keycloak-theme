@@ -76,13 +76,13 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
                             checkboxVariants({ variant, size }),
                             "peer-checked:bg-primary peer-checked:border-primary",
                             error && "border-red-500/50 bg-red-500/10",
-                            "cursor-pointer",
+                            "cursor-pointer pointer-events-none", // pointer-events-none så klicket går igenom till input
                             disabled && "cursor-not-allowed",
                             className
                         )}
                     >
                         {checkedIcon ? (
-                            <span className="opacity-0 peer-checked:opacity-100 transition-opacity">
+                            <span className="opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
                                 {checkedIcon}
                             </span>
                         ) : (
