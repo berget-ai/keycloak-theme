@@ -101,7 +101,7 @@
 
         /* Input Borders */
         --input: 0 0% 15%; /* Input backgrounds */
-        --ring: 45 15% 88% / 0.2; /* Focus ring color at 20% opacity */
+        --ring: 45 15% 88% / 0.5; /* Focus ring color at 50% opacity */
 
         /* Special Effects */
         --grid-line: rgba(229, 221, 213, 0.02); /* Subtle grid lines */
@@ -145,7 +145,7 @@
         --border-stone: 45 15% 88% / 0.3;
 
         --input: 0 0% 90%;
-        --ring: 151 29% 49% / 0.2; /* Focus ring color at 20% opacity */
+        --ring: 151 29% 49% / 0.5; /* Focus ring color at 50% opacity */
     }
 
     /* ========================================================================
